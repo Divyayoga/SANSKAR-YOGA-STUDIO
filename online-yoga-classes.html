@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Online Yoga Classes with Mukesh | Ashtangaa Yoga Worldwide</title>
+
+  <meta name="description" content="Join online yoga classes with Mukesh from Ashtangaa Yoga. Personalized 1-to-1 yoga, beginner yoga, weight loss yoga, pranayama and meditation for students worldwide.">
+
+  <meta name="keywords" content="online yoga classes, online yoga classes worldwide, yoga instructor online, personal yoga instructor, 1 to 1 yoga classes, yoga for beginners, weight loss yoga, pranayama, meditation, Ashtangaa Yoga, Mukesh Yoga">
+
+  <meta name="author" content="Mukesh Kumawat - Ashtangaa Yoga">
+
+  <link rel="canonical" href="https://ashtangaa-yoga.vercel.app/online-yoga-classes.html">
+
+  <link rel="icon" type="image/png" href="img/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- SEO Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Online Yoga Classes with Mukesh",
+    "description": "Online yoga classes including personal 1-to-1 yoga, beginner yoga, weight loss yoga, pranayama and meditation.",
+    "provider": {
+      "@type": "Person",
+      "name": "Mukesh Kumawat",
+      "brand": {
+        "@type": "Brand",
+        "name": "Ashtangaa Yoga"
+      }
+    },
+    "serviceType": "Online Yoga Classes",
+    "areaServed": "Worldwide"
+  }
+  </script>
+
+  <style>
+    :root{
+      --green:#123f35;
+      --green2:#1e604d;
+      --light:#f4f7f2;
+      --cream:#fbfaf5;
+      --gold:#c9a45c;
+      --dark:#10231e;
+      --text:#40514b;
+      --white:#ffffff;
+      --shadow:0 12px 35px rgba(16,35,30,.10);
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Inter',sans-serif;
+      color:var(--text);
+      background:var(--cream);
+      line-height:1.7;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    h1,h2,h3,h4{
+      font-family:'Cormorant Garamond',serif;
+      color:var(--dark);
+      line-height:1.15;
+    }
+
+    .container{
+      width:min(1120px,92%);
+      margin:auto;
+    }
+
+    /* HEADER */
+
+    header{
+      background:rgba(251,250,245,.96);
+      border-bottom:1px solid rgba(18,63,53,.08);
+      position:sticky;
+      top:0;
+      z-index:1000;
+      backdrop-filter:blur(10px);
+    }
+
+    .nav{
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:25px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:11px;
+    }
+
+    .brand-icon{
+      width:45px;
+      height:45px;
+      border-radius:50%;
+      border:1px solid var(--gold);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--gold);
+      font-size:25px;
+      background:var(--green);
+    }
+
+    .brand-text strong{
+      display:block;
+      color:var(--green);
+      font-family:'Cormorant Garamond',serif;
+      font-size:25px;
+      line-height:1;
+    }
+
+    .brand-text span{
+      font-size:11px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      color:#6b7771;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:24px;
+    }
+
+    nav a{
+      font-size:14px;
+      font-weight:600;
+      color:var(--dark);
+    }
+
+    nav a:hover{
+      color:var(--green2);
+    }
+
+    .nav-cta{
+      background:var(--green);
+      color:white !important;
+      padding:11px 17px;
+      border-radius:30px;
+    }
+
+    .mobile-btn{
+      display:none;
+      border:0;
+      background:none;
+      font-size:28px;
+      color:var(--green);
+      cursor:pointer;
+    }
+
+    /* HERO */
+
+    .hero{
+      background:
+        radial-gradient(circle at 10% 10%,rgba(201,164,92,.14),transparent 28%),
+        linear-gradient(135deg,#fbfaf5,#f1f6f1);
+      padding:85px 0 80px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:55px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      color:var(--green2);
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:15px;
+    }
+
+    .hero h1{
+      font-size:clamp(48px,6vw,76px);
+      margin-bottom:22px;
+    }
+
+    .hero h1 span{
+      color:var(--green2);
+    }
+
+    .hero p{
+      font-size:17px;
+      max-width:650px;
+      margin-bottom:30px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:13px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:14px 24px;
+      border-radius:30px;
+      font-weight:700;
+      font-size:14px;
+      transition:.25s;
+    }
+
+    .btn-primary{
+      background:var(--green);
+      color:white;
+    }
+
+    .btn-primary:hover{
+      background:var(--green2);
+      transform:translateY(-2px);
+    }
+
+    .btn-outline{
+      border:1px solid var(--green);
+      color:var(--green);
+    }
+
+    .btn-outline:hover{
+      background:var(--green);
+      color:white;
+    }
+
+    .hero-image{
+      position:relative;
+    }
+
+    .hero-image img{
+      width:100%;
+      height:520px;
+      object-fit:cover;
+      border-radius:28px;
+      box-shadow:var(--shadow);
+    }
+
+    .hero-badge{
+      position:absolute;
+      left:-18px;
+      bottom:25px;
+      background:white;
+      padding:16px 20px;
+      border-radius:16px;
+      box-shadow:var(--shadow);
+    }
+
+    .hero-badge strong{
+      display:block;
+      color:var(--green);
+      font-size:17px;
+    }
+
+    .hero-badge span{
+      font-size:12px;
+      color:#68756f;
+    }
+
+    /* SECTION */
+
+    section{
+      padding:85px 0;
+    }
+
+    .section-head{
+      text-align:center;
+      max-width:760px;
+      margin:0 auto 45px;
+    }
+
+    .section-head .eyebrow{
+      margin-bottom:10px;
+    }
+
+    .section-head h2{
+      font-size:clamp(38px,5vw,56px);
+      margin-bottom:15px;
+    }
+
+    .section-head p{
+      font-size:16px;
+    }
+
+    /* CLASSES */
+
+    .classes{
+      background:white;
+    }
+
+    .class-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+
+    .class-card{
+      background:var(--cream);
+      border:1px solid rgba(18,63,53,.08);
+      border-radius:22px;
+      padding:28px;
+      transition:.25s;
+    }
+
+    .class-card:hover{
+      transform:translateY(-5px);
+      box-shadow:var(--shadow);
+    }
+
+    .class-icon{
+      width:52px;
+      height:52px;
+      border-radius:50%;
+      background:var(--green);
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:22px;
+      margin-bottom:20px;
+    }
+
+    .class-card h3{
+      font-size:27px;
+      margin-bottom:10px;
+    }
+
+    .class-card p{
+      font-size:14px;
+      margin-bottom:18px;
+    }
+
+    .learn{
+      color:var(--green2);
+      font-size:13px;
+      font-weight:700;
+    }
+
+    /* WHY */
+
+    .why{
+      background:var(--light);
+    }
+
+    .two-col{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+      align-items:center;
+    }
+
+    .two-col img{
+      width:100%;
+      height:500px;
+      object-fit:cover;
+      border-radius:28px;
+      box-shadow:var(--shadow);
+    }
+
+    .content h2{
+      font-size:clamp(38px,5vw,55px);
+      margin-bottom:18px;
+    }
+
+    .content > p{
+      margin-bottom:25px;
+    }
+
+    .feature{
+      display:flex;
+      gap:15px;
+      margin:18px 0;
+    }
+
+    .feature-icon{
+      min-width:42px;
+      height:42px;
+      border-radius:50%;
+      background:var(--green);
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:bold;
+    }
+
+    .feature h3{
+      font-size:21px;
+      margin-bottom:3px;
+    }
+
+    .feature p{
+      font-size:14px;
+    }
+
+    /* LIFE STAGES */
+
+    .stages{
+      background:white;
+    }
+
+    .stage-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:20px;
+    }
+
+    .stage{
+      padding:25px;
+      background:var(--light);
+      border-radius:20px;
+      border-bottom:3px solid var(--gold);
+    }
+
+    .stage h3{
+      font-size:25px;
+      margin-bottom:10px;
+    }
+
+    .stage p{
+      font-size:14px;
+    }
+
+    /* HOW IT WORKS */
+
+    .steps{
+      background:var(--green);
+      color:white;
+    }
+
+    .steps .section-head h2,
+    .steps .section-head p{
+      color:white;
+    }
+
+    .steps .eyebrow{
+      color:#e2c980;
+    }
+
+    .step-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:25px;
+    }
+
+    .step{
+      text-align:center;
+      padding:30px 22px;
+      border:1px solid rgba(255,255,255,.16);
+      border-radius:22px;
+    }
+
+    .step-number{
+      width:52px;
+      height:52px;
+      margin:0 auto 18px;
+      border-radius:50%;
+      background:var(--gold);
+      color:var(--dark);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:800;
+      font-size:18px;
+    }
+
+    .step h3{
+      color:white;
+      font-size:27px;
+      margin-bottom:8px;
+    }
+
+    .step p{
+      color:rgba(255,255,255,.78);
+      font-size:14px;
+    }
+
+    /* PERSONAL */
+
+    .personal{
+      background:var(--cream);
+    }
+
+    .personal-card{
+      background:white;
+      border-radius:28px;
+      overflow:hidden;
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      box-shadow:var(--shadow);
+    }
+
+    .personal-card img{
+      width:100%;
+      height:100%;
+      min-height:450px;
+      object-fit:cover;
+    }
+
+    .personal-content{
+      padding:55px;
+    }
+
+    .personal-content h2{
+      font-size:48px;
+      margin-bottom:15px;
+    }
+
+    .personal-content p{
+      margin-bottom:20px;
+    }
+
+    .check-list{
+      list-style:none;
+      margin:25px 0;
+    }
+
+    .check-list li{
+      margin:10px 0;
+      padding-left:25px;
+      position:relative;
+      font-size:14px;
+    }
+
+    .check-list li::before{
+      content:"✓";
+      position:absolute;
+      left:0;
+      color:var(--green2);
+      font-weight:bold;
+    }
+
+    /* YOUTUBE */
+
+    .youtube{
+      background:var(--light);
+      text-align:center;
+    }
+
+    .youtube-box{
+      max-width:850px;
+      margin:auto;
+      background:white;
+      border-radius:25px;
+      padding:45px 30px;
+      box-shadow:var(--shadow);
+    }
+
+    .youtube-box h2{
+      font-size:45px;
+      margin-bottom:15px;
+    }
+
+    /* FAQ */
+
+    .faq{
+      background:white;
+    }
+
+    .faq-list{
+      max-width:850px;
+      margin:auto;
+    }
+
+    details{
+      border-bottom:1px solid rgba(18,63,53,.15);
+      padding:20px 5px;
+    }
+
+    summary{
+      cursor:pointer;
+      font-family:'Cormorant Garamond',serif;
+      font-size:25px;
+      font-weight:600;
+      color:var(--dark);
+    }
+
+    details p{
+      padding-top:12px;
+      font-size:15px;
+    }
+
+    /* CTA */
+
+    .final-cta{
+      background:
+        linear-gradient(rgba(18,63,53,.92),rgba(18,63,53,.92)),
+        url('img/about.png') center/cover;
+      color:white;
+      text-align:center;
+    }
+
+    .final-cta h2{
+      color:white;
+      font-size:55px;
+      margin-bottom:15px;
+    }
+
+    .final-cta p{
+      max-width:700px;
+      margin:0 auto 28px;
+      color:rgba(255,255,255,.85);
+    }
+
+    .final-cta .btn-primary{
+      background:var(--gold);
+      color:var(--dark);
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#0b2922;
+      color:rgba(255,255,255,.75);
+      padding:55px 0 25px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.5fr 1fr 1fr;
+      gap:40px;
+    }
+
+    footer h3{
+      color:white;
+      font-size:25px;
+      margin-bottom:15px;
+    }
+
+    footer p{
+      font-size:14px;
+    }
+
+    .footer-links a{
+      display:block;
+      margin:8px 0;
+      font-size:14px;
+    }
+
+    .footer-links a:hover{
+      color:var(--gold);
+    }
+
+    .copyright{
+      margin-top:40px;
+      padding-top:20px;
+      border-top:1px solid rgba(255,255,255,.12);
+      text-align:center;
+      font-size:12px;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:900px){
+
+      nav{
+        position:absolute;
+        top:78px;
+        left:0;
+        right:0;
+        background:var(--cream);
+        padding:20px;
+        display:none;
+        flex-direction:column;
+        align-items:stretch;
+        box-shadow:0 15px 30px rgba(0,0,0,.08);
+      }
+
+      nav.active{
+        display:flex;
+      }
+
+      nav a{
+        padding:8px 0;
+      }
+
+      .mobile-btn{
+        display:block;
+      }
+
+      .hero-grid,
+      .two-col,
+      .personal-card{
+        grid-template-columns:1fr;
+      }
+
+      .hero{
+        padding:60px 0;
+      }
+
+      .hero-image img{
+        height:430px;
+      }
+
+      .hero-badge{
+        left:15px;
+      }
+
+      .class-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .stage-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .two-col{
+        gap:35px;
+      }
+
+      .two-col img{
+        height:400px;
+      }
+
+      .step-grid{
+        grid-template-columns:1fr;
+      }
+
+      .personal-content{
+        padding:35px;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+
+    @media(max-width:600px){
+
+      .nav{
+        min-height:70px;
+      }
+
+      .brand-text strong{
+        font-size:21px;
+      }
+
+      .brand-icon{
+        width:40px;
+        height:40px;
+      }
+
+      .hero h1{
+        font-size:48px;
+      }
+
+      .hero p{
+        font-size:15px;
+      }
+
+      section{
+        padding:65px 0;
+      }
+
+      .class-grid,
+      .stage-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero-image img{
+        height:350px;
+      }
+
+      .section-head h2,
+      .content h2,
+      .personal-content h2,
+      .youtube-box h2,
+      .final-cta h2{
+        font-size:40px;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr;
+        gap:25px;
+      }
+
+      .personal-content{
+        padding:28px 22px;
+      }
+
+      .personal-card img{
+        min-height:320px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+  <div class="container nav">
+
+    <a href="index.html" class="brand">
+      <div class="brand-icon">ॐ</div>
+
+      <div class="brand-text">
+        <strong>Ashtangaa Yoga</strong>
+        <span>with Mukesh</span>
+      </div>
+    </a>
+
+    <button class="mobile-btn" id="mobileBtn">☰</button>
+
+    <nav id="menu">
+      <a href="index.html">Home</a>
+      <a href="online-yoga-classes.html">Online Yoga</a>
+      <a href="about-mukesh.html">About Mukesh</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html" class="nav-cta">Book a Class</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="container hero-grid">
+
+    <div>
+
+      <div class="eyebrow">
+        Traditional Yoga • Modern Guidance
+      </div>
+
+      <h1>
+        Online Yoga Classes
+        <span>with Mukesh</span>
+      </h1>
+
+      <p>
+        Practice authentic yoga from the comfort of your home with
+        personalized guidance from Mukesh at Ashtangaa Yoga.
+        Build strength, improve flexibility, support healthy weight
+        management and develop a calm, focused mind.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="contact.html" class="btn btn-primary">
+          Book Your Yoga Class
+        </a>
+
+        <a href="#classes" class="btn btn-outline">
+          Explore Classes
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-image">
+
+      <img src="img/hero-slider/2.png"
+           alt="Online Yoga Classes with Mukesh">
+
+      <div class="hero-badge">
+        <strong>Yoga From Anywhere</strong>
+        <span>Online guidance for students worldwide</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CLASSES -->
+
+<section class="classes" id="classes">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Choose Your Practice
+      </div>
+
+      <h2>
+        Online Yoga Programs
+      </h2>
+
+      <p>
+        Choose a practice according to your goals, experience and
+        lifestyle. Each program is designed to help you practice
+        yoga consistently and safely.
+      </p>
+
+    </div>
+
+
+    <div class="class-grid">
+
+
+      <a href="personal-yoga.html" class="class-card">
+
+        <div class="class-icon">🧘</div>
+
+        <h3>Personal 1-to-1 Yoga</h3>
+
+        <p>
+          Personalized online yoga sessions designed around your
+          body, goals, fitness level and daily routine.
+        </p>
+
+        <span class="learn">Explore Personal Yoga →</span>
+
+      </a>
+
+
+      <a href="yoga-for-beginners.html" class="class-card">
+
+        <div class="class-icon">🌿</div>
+
+        <h3>Yoga for Beginners</h3>
+
+        <p>
+          Start yoga step by step with simple movements, breathing
+          practices and foundational yoga postures.
+        </p>
+
+        <span class="learn">Start as a Beginner →</span>
+
+      </a>
+
+
+      <a href="weight-loss-yoga.html" class="class-card">
+
+        <div class="class-icon">🔥</div>
+
+        <h3>Weight Loss Yoga</h3>
+
+        <p>
+          Combine yoga, movement and mindful lifestyle practices
+          to support healthy weight management.
+        </p>
+
+        <span class="learn">Explore Weight Loss Yoga →</span>
+
+      </a>
+
+
+      <a href="pranayama.html" class="class-card">
+
+        <div class="class-icon">🌬️</div>
+
+        <h3>Pranayama</h3>
+
+        <p>
+          Learn traditional breathing practices to develop better
+          breath awareness, relaxation and mental focus.
+        </p>
+
+        <span class="learn">Explore Pranayama →</span>
+
+      </a>
+
+
+      <a href="meditation.html" class="class-card">
+
+        <div class="class-icon">🪷</div>
+
+        <h3>Meditation</h3>
+
+        <p>
+          Develop stillness, awareness and inner calm through
+          traditional meditation practices.
+        </p>
+
+        <span class="learn">Explore Meditation →</span>
+
+      </a>
+
+
+      <a href="prenatal-yoga.html" class="class-card">
+
+        <div class="class-icon">🤍</div>
+
+        <h3>Prenatal Yoga</h3>
+
+        <p>
+          Gentle, mindful yoga practices for pregnancy with
+          appropriate modifications and guidance.
+        </p>
+
+        <span class="learn">Explore Prenatal Yoga →</span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- WHY ASHTANGAA -->
+
+<section class="why">
+
+  <div class="container two-col">
+
+    <div>
+
+      <img src="img/about.png"
+           alt="Ashtangaa Yoga practice with Mukesh">
+
+    </div>
+
+
+    <div class="content">
+
+      <div class="eyebrow">
+        Why Ashtangaa Yoga
+      </div>
+
+      <h2>
+        Yoga That Fits Your Life
+      </h2>
+
+      <p>
+        Online yoga should not feel like a one-size-fits-all
+        workout. At Ashtangaa Yoga, the practice is adapted to
+        your experience, goals and lifestyle.
+      </p>
+
+
+      <div class="feature">
+
+        <div class="feature-icon">✓</div>
+
+        <div>
+          <h3>Personalized Guidance</h3>
+
+          <p>
+            Learn with clear instructions and practical corrections
+            according to your level.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="feature">
+
+        <div class="feature-icon">✓</div>
+
+        <div>
+          <h3>Traditional Yoga Practices</h3>
+
+          <p>
+            Explore asana, pranayama, meditation and mindful
+            practices inspired by traditional yoga.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="feature">
+
+        <div class="feature-icon">✓</div>
+
+        <div>
+<h3>Beginner Friendly</h3>
+<p>
+You don't need to be flexible or
+experienced to begin.
+Start from your current level.
+</p>
+</div>
+</div>
+<div class="feature">
+<div class="feature-icon"></div>
+<div>
+<h3>Practice From Anywhere</h3>
+<p>
+Join online sessions from home,
+whether you are in
+India or another part of the
+world.
+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- LIFE STAGES -->
+<section class="stages">
+<div class="container">
+<div class="section-head">
+<div class="eyebrow">
+Yoga For Every Stage
+</div>
+<h2>
+Find the Right Practice for You </h2>
+<p>
+Your yoga practice can evolve with
+your body, goals and
+stage of life.
+</
+</div>
+<div class="stage-grid">
+<div class="stage">
+<h3>Beginners</h3>
+Learn the fundamentals of yoga,
+breathing and basic
+way.
+postures in a simple step-by-step
+</p>
+</div>
+<div class="stage">
+<h3>Fitness & Weight Management</h3>
+Build an active routine combining
+yoga, movement and
+mindful lifestyle habits.
+</p>
+</div>
+<div class="stage">
+<h3>Prenatal</h3>
+Gentle pregnancy-focused practices
+with appropriate
+modifications and safety
+considerations.
+</p>
+</div>
+<div class="stage">
+<h3>Postnatal</h3>
+Gradually return to movement and
+yoga after childbirth
+guidance.
+with appropriate professional
+</p>
+</div>
+</div>
+</div>
+</section>
+<!-- HOW IT WORKS
+<-->
+<section class="steps">
+<div class="container">
+<div class="section-head">
+simple.
+<div class="eyebrow"> Simple Process </div>
+<h2>
+How Online Yoga Classes Work
+</h2>
+<p>
+Starting your online yoga journey is
+</p>
+</div>
+<div class="step-grid">
+<div class="step">
+<div class="step-number">1</div>
+<h3>Share Your Goal</h3>
+<p>
+Tell Mukesh about your experience, goals and what you
+would like to improve.
+</p>
+</div>
+<div class="step">
+<div class="step-number">2</div>
+<h3>Choose Your Class</h3>
+<p> Select the yoga program or personalized 1-to-1 session that suits your needs.
+</p>
+</div>
+<div class="step">
+<div class="step-number">3</div>
+<h3>Practice Consistently</h3>
+<p> Follow your practice regularly and build sustainable habits for body and mind.
+</p>
+</div>
+</div>
+</div>
+</section>
+<!-- PERSONAL 1-TO-1 -->
+<section class="personal">
+<div class="container">
+<div class="personal-card">
+<div>
+class">
+<img src="img/1.jpg"
+</div>
+alt="Personal 1-to-1 online yoga
+<div class="personal-content">
+<div class="eyebrow">
+Personalized Online Yoga
+</div>
+<h2>
+1-to-1 Yoga Classes With Mukesh
+</h2>
+If you want individual attention, a personalized 1-to-1
+online yoga class can be a better choice than a general group session.
+</p>
+Your practice can be adapted
+according to your current level, goals, schedule and experience.
+</p>
+<ul class="check-list">
+<li>
+Personalized yoga practice
+</li>
+<li>
+corrections
+Individual guidance and
+</li>
+<li>
+Beginner-friendly approach
+</li>
+guidance
+<li>
+Flexible online practice
+</li>
+<li>
+Yoga, pranayama and meditation
+</li>
+</ul>
+<a href="personal-yoga.html" class="btn btn-primary">
+Explore 1-to-1 Yoga
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- YOUTUBE
+-->
+<section class="youtube">
+<div class="container">
+<div class="youtube-box">
+<div class="eyebrow"> Free Yoga Practice
+</div>
+<h2>
+YouTube
+Practice With Ashtangaa Yoga on
+</h2>
+<p>
+Explore free yoga classes, pranayama,
+meditation,
+beginner practices and wellness
+guidance on the
+Ashtangaa Yoga YouTube channel.
+</p>
+<br>
+href="https://youtube.com/@ashtangayogawithmuk
+esh"
+target="_blank"
+rel="noopener"
+class="btn btn-primary">
+Visit YouTube Channel
+</a>
+</div>
+</div>
+</section>
+<!-- FAQ
+-->
+<section class="faq">
+<div class="container">
+<div class="section-head">
+<div class="eyebrow"> Frequently Asked Questions
+</div>
+<h2>
+Online Yoga Classes FAQ
+</h2>
+</div>
+<div class="faq-list">
+<details>
+classes?
+<summary> Can beginners join online yoga
+</summary>
+Yes. Beginners can start with simple yoga postures,
+breathing practices and gradual
+progression according to their current ability.
+</p>
+</details>
+yoga?
+<details>
+<summary>
+Do I need to be flexible to start
+</summary>
+<p>
+No. Flexibility is not a requirement
+for starting yoga.
+A regular and appropriate practice
+can gradually improve
+mobility and body awareness.
+</p>
+</details>
+<details>
+<summary> Are 1-to-1 online yoga classes
+available?
+</summary>
+Yes. Personalized 1-to-1 online yoga sessions are
+available for students who want individual attention
+goals.
+and a practice designed around their
+</p>
+</details>
+join?
+<details>
+<summary> Can students from other countries
+</summary>
+<p>
+Yes. Online yoga classes can be joined by students living outside India. Contact Mukesh
+to discuss your
+options.
+goals, schedule and suitable class
+</p>
+</details>
+<details>
+<summary>
+What equipment do I need?
+</summary>
+<p>
+Usually, a yoga mat and a
+comfortable space are enough
+to begin. Additional props may be
+recommended depending
+on the practice.
+</p>
+</details>
+<details>
+<summary>
+Can yoga help with weight
+management?
+</summary>
+<p>
+Yoga can support an active lifestyle, movement,
+strength, flexibility and mindful
+habits. Sustainable
+weight management also depends on nutrition, sleep,
+factors.
+daily activity and other lifestyle
+</p>
+</details>
+<details>
+<summary>
+Is prenatal yoga available?
+</summary>
+<p>
+Prenatal yoga may be suitable for pregnancy, but practices should be
+many people during
+appropriately modified.
+Medical advice should be followed
+when required.
+</p>
+</details>
+<details>
+<summary>
+Is postnatal yoga available?
+</summary>
+<p>
+Postnatal yoga can be introduced gradually depending on
+recovery and individual
+circumstances. Appropriate
+medical guidance should be followed
+after childbirth.
+</p>
+</details>
+</div>
+</div>
+</section>
+<!-- FINAL CTA
+-->
+<section class="final-cta">
+<div class="container">
+<div class="eyebrow"> Begin Your Yoga Journey
+</div>
+<h2>
+Ready to Start Practicing?
+</h2>
+<p>
+Whether you are a complete beginner,
+looking for personal
+guidance, working toward better fitness
+or simply want to
+develop a calmer mind, Ashtangaa Yoga
+can help you build a
+consistent practice from wherever you
+are.
+</p>
+<a href="contact.html" class="btn
+btn-primary">
+Book a Yoga Class
+</a>
+</div>
+</section>
+<!-- FOOTER
+<footer>
+-->
+<div class="container">
+<div class="footer-grid">
+<div>
+<h3>Ashtangaa Yoga</h3>
+<p>
+Online yoga classes with Mukesh.
+Explore traditional
+yoga, personal 1-to-1 sessions,
+pranayama, meditation
+and practical yoga programs from
+anywhere in the world.
+</p>
+</div>
+<div class="footer-links">
+<h3>Yoga Classes</h3>
+<a href="online-yoga-classes.html">
+Online Yoga Classes
+</a>
+<a href="personal-yoga.html"> Personal 1-to-1 Yoga
+</a>
+href="yoga-for-beginners.html"> Yoga for Beginners
+</a>
+<a href="weight-loss-yoga.html"> Weight Loss Yoga
+</a>
+href="pranayama.html">
+Pranayama
+</a>
+</div>
+<div class="footer-links">
+<h3>Explore</h3>
+<a href="about-mukesh.html">
+About Mukesh
+</a>
+<a href="meditation.html">
+Meditation
+</a>
+<a href="prenatal-yoga.html">
+Prenatal Yoga
+</a>
+<a href="postnatal-yoga.html">
+Postnatal Yoga
+</a>
+<a href="contact.html">
+Contact
+</a>
+</div>
+</div>
+<div class="copyright">
+© 2026 Ashtangaa Yoga with Mukesh. All
+Rights Reserved.
+</div>
+</div>
+</footer>
+<!-- MOBILE MENU SCRIPT
+<script>
+const mobileBtn =
+<-->
+document.getElementById("mobileBtn");
+const menu
+=
+document.getElementById("menu");
+mobileBtn.addEventListener("click",
+function(){
+menu.classList.toggle("active");
+});
+</script>
+</body>
+</html>
