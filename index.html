@@ -1,1194 +1,393 @@
 <!DOCTYPE html>
-<html lang="zxx">
-
+<html lang="en">
 <head>
-	<title>SANSKAR YOGA STUDIO</title>
-	<meta charset="UTF-8">
-	<meta name="description" content="Ahana Yoga HTML Template">
-	<meta name="keywords" content="yoga, html">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="stylesheet" href="css/bootstrap.min.css" />
-	<link rel="stylesheet" href="css/font-awesome.min.css" />
-	<link rel="stylesheet" href="css/owl.carousel.min.css" />
-	<link rel="stylesheet" href="css/nice-select.css" />
-	<link rel="stylesheet" href="css/magnific-popup.css" />
-	<link rel="stylesheet" href="css/slicknav.min.css" />
-	<link rel="stylesheet" href="css/animate.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="/dist/style.css">
-	<link rel="stylesheet" href="css/style.css" />
+  <title>Ashtangaa Yoga with Mukesh | Online Yoga Classes Worldwide</title>
+  <meta name="description" content="Ashtangaa Yoga with Mukesh offers online yoga classes, 1-to-1 personal yoga, yoga for beginners, weight loss yoga, pranayama and meditation for students worldwide.">
+  <meta name="keywords" content="online yoga classes, personal yoga instructor, yoga for beginners, weight loss yoga, pranayama, meditation, Ashtangaa Yoga, Mukesh Yoga">
+  <meta name="author" content="Mukesh Kumawat - Ashtangaa Yoga">
+  <meta name="robots" content="index, follow">
 
+  <meta property="og:title" content="Ashtangaa Yoga with Mukesh | Online Yoga Classes">
+  <meta property="og:description" content="Traditional Yoga, Pranayama and Meditation with Mukesh. Online personal yoga classes for students worldwide.">
+  <meta property="og:type" content="website">
 
+  <link rel="icon" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --green:#123f35;
+      --green2:#1e604d;
+      --light:#f4f7f2;
+      --cream:#fbfaf5;
+      --gold:#c9a45c;
+      --dark:#10231e;
+      --text:#40514b;
+      --white:#fff;
+      --shadow:0 18px 50px rgba(16,35,30,.10);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--text);background:var(--white);line-height:1.7}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{width:min(1160px,92%);margin:auto}
+    .topbar{background:var(--green);color:#eaf1ed;font-size:13px}
+    .topbar .container{min-height:38px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+    header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);box-shadow:0 4px 22px rgba(0,0,0,.06)}
+    .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .brand{display:flex;align-items:center;gap:11px}
+    .brand-mark{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:#fff;font-size:23px}
+    .brand-text strong{display:block;font-family:"Cormorant Garamond",serif;font-size:28px;line-height:.9;color:var(--green);letter-spacing:.5px}
+    .brand-text span{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
+    .menu{display:flex;align-items:center;gap:24px;font-size:14px;font-weight:600;color:#27463e}
+    .menu a:hover{color:var(--gold)}
+    .menu .btn{color:#fff}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 21px;border-radius:999px;background:var(--green);color:#fff;font-weight:700;border:1px solid var(--green);transition:.2s}
+    .btn:hover{transform:translateY(-2px);background:var(--green2)}
+    .btn.gold{background:var(--gold);border-color:var(--gold);color:#17372e}
+    .btn.outline{background:transparent;color:var(--green);border-color:rgba(18,63,53,.3)}
+    .mobile-btn{display:none;border:0;background:none;font-size:28px;color:var(--green)}
+    .hero{background:linear-gradient(120deg,#eef5ee 0%,#fff 56%,#f6efe0 100%);overflow:hidden}
+    .hero-grid{min-height:680px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;padding:70px 0}
+    .eyebrow{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:800;margin-bottom:12px}
+    h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;color:var(--green);line-height:1.05;margin:0 0 18px}
+    h1{font-size:clamp(52px,6vw,82px)}
+    h2{font-size:clamp(38px,4vw,54px)}
+    h3{font-size:29px}
+    .hero h1 span{display:block;color:var(--gold);font-size:.52em;letter-spacing:3px;font-family:Inter,sans-serif;text-transform:uppercase;margin-top:13px}
+    .hero p{font-size:18px;max-width:610px;color:#52635d}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .hero-note{margin-top:18px;font-size:13px;color:#6d7a75}
+    .hero-visual{position:relative;min-height:560px;display:flex;align-items:center;justify-content:center}
+    .hero-visual:before{content:"";position:absolute;width:450px;height:450px;border-radius:50%;background:radial-gradient(circle,#dcebdd 0%,#edf4ea 55%,transparent 70%)}
+    .hero-visual img{position:relative;z-index:1;max-height:570px;object-fit:contain;filter:drop-shadow(0 25px 30px rgba(16,35,30,.16))}
+    .badge{position:absolute;z-index:2;bottom:35px;left:15px;background:#fff;padding:16px 20px;border-radius:14px;box-shadow:var(--shadow);font-weight:700;color:var(--green)}
+    .badge small{display:block;font-weight:400;color:#6c7772;margin-top:3px}
+    .section{padding:90px 0}
+    .section.alt{background:var(--light)}
+    .section.cream{background:var(--cream)}
+    .section-head{text-align:center;max-width:700px;margin:0 auto 45px}
+    .section-head p{margin:0;color:#68756f}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .card{background:#fff;border:1px solid #e6ece7;border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 28px rgba(18,63,53,.05);transition:.25s}
+    .card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .card img{height:190px;width:100%;object-fit:cover}
+    .card-body{padding:22px}
+    .card h3{font-size:27px;margin-bottom:9px}
+    .card p{font-size:14px;color:#68756f;margin:0 0 18px}
+    .link{font-weight:800;color:var(--green);font-size:14px}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+    .photo{border-radius:24px;overflow:hidden;box-shadow:var(--shadow);background:#e7eee8}
+    .photo img{width:100%;height:100%;min-height:450px;object-fit:cover}
+    .checks{display:grid;gap:17px;margin:25px 0}
+    .check{display:flex;gap:13px;align-items:flex-start}
+    .check i{width:27px;height:27px;border-radius:50%;display:grid;place-items:center;background:#e2eee4;color:var(--green);font-style:normal;font-weight:800;flex:0 0 auto}
+    .check strong{display:block;color:var(--green)}
+    .check span{font-size:14px;color:#68756f}
+    .mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:25px}
+    .mini{padding:20px;border-radius:15px;background:#fff;border:1px solid #e7ece7}
+    .mini strong{display:block;color:var(--green);margin-bottom:5px}
+    .mini span{font-size:13px;color:#6b7772}
+    .program-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .program{padding:28px 22px;background:#fff;border:1px solid #e4ebe5;border-radius:18px;min-height:205px}
+    .icon{width:48px;height:48px;border-radius:50%;background:#e7f0e7;color:var(--green);display:grid;place-items:center;font-size:22px;margin-bottom:18px}
+    .program h3{font-size:25px;margin-bottom:8px}
+    .program p{font-size:13px;color:#6a7771;margin:0 0 14px}
+    .youtube{background:linear-gradient(135deg,#123f35,#1f614d);color:#fff;border-radius:26px;padding:60px;position:relative;overflow:hidden}
+    .youtube:after{content:"ॐ";position:absolute;right:45px;top:15px;font-family:serif;font-size:170px;color:rgba(255,255,255,.06)}
+    .youtube h2{color:#fff;max-width:650px}
+    .youtube p{max-width:700px;color:#d8e7df}
+    .testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .quote{padding:28px;background:#fff;border:1px solid #e6ece7;border-radius:18px;box-shadow:0 8px 28px rgba(18,63,53,.04)}
+    .quote p{font-size:14px;color:#596a63;margin-top:0}
+    .quote strong{color:var(--green)}
+    .faq{max-width:850px;margin:auto;display:grid;gap:12px}
+    details{border:1px solid #e2e9e3;border-radius:14px;padding:18px 20px;background:#fff}
+    summary{cursor:pointer;font-weight:700;color:var(--green)}
+    details p{font-size:14px;color:#68756f;margin:12px 0 0}
+    .cta{text-align:center;padding:80px 20px;background:linear-gradient(120deg,#f1f6ef,#f8f1e2)}
+    .cta p{max-width:650px;margin:0 auto 25px;color:#65736d}
+    footer{background:#0e2d26;color:#d6e4dd;padding:60px 0 25px}
+    .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:45px}
+    footer h3{color:#fff;font-size:27px}
+    footer p,footer a{font-size:14px;color:#b8ccc4}
+    footer a{display:block;margin:8px 0}
+    .copyright{border-top:1px solid rgba(255,255,255,.1);margin-top:35px;padding-top:20px;text-align:center;font-size:12px;color:#8da59b}
+    @media(max-width:1000px){
+      .menu{gap:14px}
+      .cards,.program-grid{grid-template-columns:repeat(2,1fr)}
+      .hero-grid,.split{grid-template-columns:1fr}
+      .hero-grid{padding-top:45px}
+      .hero-visual{min-height:430px}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:760px){
+      .topbar{display:none}
+      .nav{min-height:68px}
+      .mobile-btn{display:block}
+      .menu{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;padding:18px 5%;box-shadow:0 15px 25px rgba(0,0,0,.08);flex-direction:column;align-items:flex-start}
+      .menu.open{display:flex}
+      .menu .btn{width:100%}
+      .brand-text strong{font-size:24px}
+      .hero-grid{min-height:auto}
+      .hero-visual{min-height:380px}
+      .hero-visual:before{width:330px;height:330px}
+      .hero-visual img{max-height:390px}
+      .badge{left:0;bottom:10px}
+      .section{padding:65px 0}
+      .cards,.program-grid,.testimonial-grid,.footer-grid,.mini-grid{grid-template-columns:1fr}
+      .youtube{padding:38px 25px}
+      .photo img{min-height:330px}
+    }
+  </style>
 </head>
 
 <body>
-
-
-
-	<header class="header-section">
-		<div class="header-top">
-			<div class="row m-0">
-				<div class="col-md-6 d-none d-md-block p-0">
-					<div class="header-info">
-						<i class="material-icons">map</i>
-						<p>2nd Floor, Pathak complex</p>
-					</div>
-					<div class="header-info">
-						<i class="material-icons">phone</i>
-						<p>+91 97858 48405</p>
-					</div>
-				</div>
-				<div class="col-md-6 text-left text-md-right p-0">
-					<div class="header-info d-none d-md-inline-flex">
-						<i class="material-icons">alarm_on</i>
-						<p>Mon - Sun: 6:00am - 08:00pm</p>
-					</div>
-
-				</div>
-			</div>
-		</div>
-		<div class="header-bottom">
-			<a href="index.html" class="site-logo">
-				<img src="img/logo.png" alt>
-			</a>
-		</div>
-		<div class="container">
-			<ul class="main-menu">
-				<li><a href="index.html" class="active">Home</a></li>
-				<li><a href="#about1">About</a></li>
-				<li><a href="#classes1">Classes</a>
-				</li>
-				<li><a href="#trainer1">trainers</a>
-
-				</li>
-				<li><a href="#Pricing1">Pricing</a>
-
-				</li>
-
-				<li><a href="#contact1">Contact</a></li>
-			</ul>
-		</div>
-		</div>
-	</header>
-
-
-	<div class="infor-model-warp">
-		<div class="infor-model d-flex align-items-center">
-			<div class="infor-close">
-				<i class="material-icons">close</i>
-			</div>
-			<div class="infor-middle">
-				<a href="index.html#" class="infor-logo">
-					<img src="img/logo-2.png" alt>
-				</a>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-				<div class="insta-imgs">
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="img/infor/1.jpg" alt>
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="img/infor/2.jpg" alt>
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="img/infor/3.jpg" alt>
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="img/infor/4.jpg" alt>
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="img/infor/5.jpg" alt>
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-
-							</div>
-						</div>
-					</div>
-					<div class="insta-item">
-						<div class="insta-img">
-							<img src="img/infor/6.jpg" alt>
-							<div class="insta-hover">
-								<i class="fa fa-instagram"></i>
-
-							</div>
-						</div>
-					</div>
-				</div>
-				<form class="infor-form">
-					<input type="text" placeholder="Your Email">
-					<button><img src="img/icons/send.png" alt></button>
-				</form>
-				<div class="insta-social">
-					<a href="index.html#"><i class="fa fa-linkedin"></i></a>
-					<a href="index.html#"><i class="fa fa-twitter"></i></a>
-					<a href="index.html#"><i class="fa fa-instagram"></i></a>
-					<a href="index.html#"><i class="fa fa-facebook"></i></a>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-	<section class="hero-section">
-		<div class="hero-social-warp">
-			<div class="hero-social">
-				<a href="index.html#"><i class="fa fa-facebook"></i></a>
-				<a href="index.html#"><i class="fa fa-instagram"></i></a>
-				<a href="index.html#"><i class="fa fa-twitter"></i></a>
-				<a href="index.html#"><i class="fa fa-linkedin"></i></a>
-			</div>
-		</div>
-		<div class="arrow-buttom">
-			<img src="img/icons/arrows-buttom.png" alt>
-		</div>
-		<div class="hero-slider owl-carousel">
-			<div class="hs-item">
-				<div class="hs-style-1 text-center">
-					<img src="img/hero-slider/1.png" alt>
-				</div>
-			</div>
-			<div class="hs-item">
-				<div class="hs-style-2">
-					<div class="container-fluid h-100">
-						<div class="row h-100">
-							<div class="col-lg-6 h-100 d-none d-lg-flex align-items-xl-end align-items-lg-center">
-								<div class="hs-img">
-									<img src="img/hero-slider/2.png" alt>
-								</div>
-							</div>
-							<div class="col-lg-6 d-flex align-items-center">
-								<div class="hs-text-warp">
-									<div class="hs-text">
-										<h2>Get slim and toned with yoga</h2>
-										<p>Incorporating yoga into your fitness routine is not just about flexibility
-											and relaxation—it's also a powerful tool for sculpting and toning your body.
-											At SANSKAR YOGA STUDIO, we offer specialized yoga programs designed to help
-											you achieve a slim and toned physique while enhancing your overall
-											well-being.</p>
-										<div class="site-btn sb-white"><a href="#contact1">Register now</a></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="hs-item">
-				<div class="hs-style-3 text-center">
-					<div class="container">
-						<div class="hs-text">
-							<h2>Reduce your stress</h2>
-							<p>In the hustle and bustle of modern life, stress can weigh heavily on our minds and
-								bodies. At SANSKAR YOGA STUDIO, we offer a sanctuary where you can find peace amidst the
-								chaos.</p>
-							<div class="site-btn sb-white"><a href="#contact1">Register now</a></div>
-						</div>
-					</div>
-					<div class="hs-img">
-						<img src="img/hero-slider/3.png" alt>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section id="about1" class="about-section spad" style="padding-bottom: 0;">
-		<div class="container">
-			<div class="section-title text-center">
-				<img src="img/icons/logo-icon.png" alt>
-				<h2>Book A Free Trial Class</h2>
-				<p>Discover the benefits of yoga and find the perfect class to match your goals and needs. We can't wait
-					to welcome you to our studio!</p>
-			</div>
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="about-img">
-						<img src="img/1.jpg" alt>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<form action="https://api.web3forms.com/submit" method="POST" class="singup-form contact-form">
-						<input type="hidden" name="access_key" value="fe52411e-9b4a-4baa-9cac-3bda964cc72b">
-						<div class="row">
-							<div class="col-md-6">
-								<input name="name" type="text" placeholder="First Name">
-							</div>
-							<div class="col-md-6">
-								<input name="name" type="text" placeholder="Last Name">
-							</div>
-							<div class="col-md-6">
-								<input name="email" type="text" placeholder="Your Email">
-							</div>
-							<div class="col-md-6">
-								<input name="Phone No." type="text" placeholder="Phone Number">
-							</div>
-							<div class="col-md-12">
-								<select class="select" name="training type" required>
-									<option value="Yoga For Beginners">Yoga For Beginners</option>
-									<option value="Yoga For Kids">Yoga For Kids</option>
-									<option value="Yoga For Weight Loss/Gain">Yoga For Weight Loss/Gain</option>
-									<option value="Diabetes and Thyroid">Diabetes and Thyroid</option>
-									<option value="Postnatal Yoga">Postnatal Yoga</option>
-									<option value="Yoga for Conceiving">Yoga for Conceiving</option>
-									<option value="Prenatal Yoga">Prenatal Yoga</option>
-									<option value="Yoga For Seniors">Yoga For Seniors</option>
-									<option value="Yoga For Corporates">Yoga For Corporates</option>
-								</select>
-
-								<label>
-									<center>Free Trial Preferred Date</center><br>
-									<span class="wpcf7-form-control-wrap" data-name="date-338">
-										<input name="date" class="wpcf7-form-control wpcf7-date wpcf7-validates-as-date"
-											min="2024-01-01" max="2030-12-31" type="date" name="date" required="">
-									</span>
-
-								</label>
-
-								<button class="site-btn sb-gradient">Send message</button>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-	<section id="about1" class="about-section spad">
-		<div class="container">
-			<div class="section-title text-center">
-				<img src="img/icons/logo-icon.png" alt>
-				<h2>Welcome to SANSKAR YOGA STUDIO</h2>
-				<p>Practice Yoga to perfect physical beauty, take care of your soul and enjoy life more fully!</p>
-			</div>
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="about-img">
-						<img src="img/about.png" alt>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="about-item">
-						<div class="ai-icon">
-							<img src="img/icons/about-1.png" alt>
-						</div>
-						<div class="ai-text">
-							<h4>Full Rejuvenation</h4>
-							<p>Revitalize your mind, body, and spirit with our comprehensive yoga programs.</p>
-						</div>
-					</div>
-					<div class="about-item">
-						<div class="ai-icon">
-							<img src="img/icons/about-2.png" alt>
-						</div>
-						<div class="ai-text">
-							<h4>Extension of Spring</h4>
-							<p>Experience the renewal and growth of spring all year round.
-							</p>
-						</div>
-					</div>
-					<div class="about-item">
-						<div class="ai-icon">
-							<img src="img/icons/about-3.png" alt>
-						</div>
-						<div class="ai-text">
-							<h4>Against Aging</h4>
-							<p>Embrace the timeless benefits of yoga. </p>
-						</div>
-					</div>
-
-					<div class="about-item">
-						<div class="ai-icon">
-							<img src="img/icons/about-4.png" alt>
-						</div>
-						<div class="ai-text">
-							<h4>Slim Body</h4>
-							<p>Achieve a lean and toned physique with our specialized yoga sessions.</p>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="wwd-section spad set-bg" data-setbg="img/wwd-bg.jpg"
-		style="background-image: url(&quot;img/wwd-bg.jpg&quot;);">
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-6 col-lg-7 ml-auto">
-					<div class="wwd-text">
-						<h3>What we do</h3>
-						<p>We offer a holistic approach to wellness through a variety of yoga practices designed to
-							enhance your physical, mental, and spiritual well-being.</p>
-						<div class="single-progress-item">
-							<p>Breathing</p>
-							<div class="progress-bar-style" data-progress="84" data-bgcolor="#f76d63"></div>
-						</div>
-						<div class="single-progress-item">
-							<p>Metabolism</p>
-							<div class="progress-bar-style" data-progress="75" data-bgcolor="#f76d63"></div>
-						</div>
-						<div class="single-progress-item">
-							<p>Flexibility</p>
-							<div class="progress-bar-style" data-progress="90" data-bgcolor="#f76d63"></div>
-						</div>
-						<div class="single-progress-item">
-							<p>Strongness</p>
-							<div class="progress-bar-style" data-progress="78" data-bgcolor="#f76d63"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-
-
-	<section id="classes1" class="classes-section spad">
-		<div class="container">
-			<div class="section-title text-center">
-				<img src="img/icons/logo-icon.png" alt>
-				<h2>Popular Classes</h2>
-				<p>Practice Yoga to perfect physical beauty, take care of your soul and enjoy life more fully!</p>
-			</div>
-			<div class="classes-slider owl-carousel">
-				<div class="classes-item">
-					<div class="ci-img">
-						<img src="img/classes/5.jpg" alt>
-					</div>
-					<div class="ci-text">
-						<h4><a href="classes-details.html">Meditation</a></h4>
-						<div class="ci-metas">
-							<div class="ci-meta"><i class="material-icons">event_available</i>Mon, Wed, Fri</div>
-							<div class="ci-meta"><i class="material-icons">alarm_on</i>6:00am - 08:00pm</div>
-						</div>
-						<p>Embark on a journey of self-discovery and relaxation with our Meditation class.</p>
-					</div>
-					<div class="ci-bottom">
-						<div class="ci-author">
-							<img src="img/classes/author/5.jpg" alt>
-							<div class="author-text">
-								<h6>Mukesh Kumawat</h6>
-								<p>Yoga Trainer</p>
-							</div>
-						</div>
-						<a href="#contact1" class="site-btn sb-gradient">book now</a>
-					</div>
-				</div>
-				<div class="classes-item">
-					<div class="ci-img">
-						<img src="img/classes/6.jpg" alt>
-					</div>
-					<div class="ci-text">
-						<h4>Pranayama</h4>
-						<div class="ci-metas">
-							<div class="ci-meta"><i class="material-icons">event_available</i>Mon, Wed, Fri</div>
-							<div class="ci-meta"><i class="material-icons">alarm_on</i>6:00am - 08:00pm</div>
-						</div>
-						<p>Discover the art of conscious breathing to enhance vitality and reduce stress.</p>
-					</div>
-					<div class="ci-bottom">
-						<div class="ci-author">
-							<img src="img/classes/author/5.jpg" alt>
-							<div class="author-text">
-								<h6>Mukesh Kumawat</h6>
-								<p>Yoga Trainer</p>
-							</div>
-						</div>
-						<a href="#contact1" class="site-btn sb-gradient">book now</a>
-					</div>
-				</div>
-				<div class="classes-item">
-					<div class="ci-img">
-						<img src="img/classes/3.jpg" alt>
-					</div>
-					<div class="ci-text">
-						<h4>Yoga Therapy</h4>
-						<div class="ci-metas">
-							<div class="ci-meta"><i class="material-icons">event_available</i>Mon, Wed, Fri</div>
-							<div class="ci-meta"><i class="material-icons">alarm_on</i>6:00am - 08:00pm</div>
-						</div>
-						<p>Experience personalized care and support with our Yoga Therapy sessions.</p>
-					</div>
-					<div class="ci-bottom">
-						<div class="ci-author">
-							<img src="img/classes/author/5.jpg" alt>
-							<div class="author-text">
-								<h6>Mukesh Kumawat</h6>
-								<p>Yoga Trainer</p>
-							</div>
-						</div>
-						<a href="#contact1" class="site-btn sb-gradient">book now</a>
-					</div>
-				</div>
-				<div class="classes-item">
-					<div class="ci-img">
-						<img src="img/classes/7.webp" alt>
-					</div>
-					<div class="ci-text">
-						<h4>Advance Yoga</h4>
-						<div class="ci-metas">
-							<div class="ci-meta"><i class="material-icons">event_available</i>Mon, Wed, Fri</div>
-							<div class="ci-meta"><i class="material-icons">alarm_on</i>6:00am - 08:00pm</div>
-						</div>
-						<p>Challenge yourself and deepen your practice with our Advanced Yoga classes.</p>
-					</div>
-					<div class="ci-bottom">
-						<div class="ci-author">
-							<img src="img/classes/author/5.jpg" alt>
-							<div class="author-text">
-								<h6>Mukesh Kumawat</h6>
-								<p>Yoga Trainer</p>
-							</div>
-						</div>
-						<a href="#contact1" class="site-btn sb-gradient">book now</a>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</section>
-
-
-	<section id="trainer1" class="trainer-section overflow-hidden spad">
-		<div class="container">
-			<div class="section-title text-center">
-				<img src="img/icons/logo-icon.png" alt>
-				<h2>Our Trainer Yoga</h2>
-				<p>Our highly skilled and experienced trainers are dedicated to guiding you on your yoga journey.</p>
-			</div>
-			<div class="trainer-details">
-				<div class="trainer-info">
-					<div class="td-left">
-						<img src="img/classes/author/5.jpg" alt>
-						<div class="td-social">
-							<a href="https://www.facebook.com/Mukesh.kumawat21?mibextid=ZbWKwL"><i
-									class="fa fa-facebook"></i></a>
-							<a href="https://www.instagram.com/themukesh.k?igsh=MTJkazE0N25tOHoyMw=="><i
-									class="fa fa-instagram"></i></a>
-							<a href="https://youtube.com/@ashtangaa?si=mzz8ym3bxGcq2JVc"><i
-									class="fa fa-youtube-play"></i></a>
-							<a href="https://youtube.com/@themukesh.k?si=VhbAGaLL2f4s6Pao"><i
-									class="fa fa-youtube-play"></i></a>
-						</div>
-					</div>
-					<div class="td-right">
-						<h3>Mukesh Kumawat</h3>
-						<h6>Yoga Trainer</h6>
-						<ul>
-							<li><strong>Experience:</strong>
-								<p>10+ years</p>
-							</li>
-							<li><strong>Email:</strong>
-								<p>sanskaryogastudio@gmail.com
-								</p>
-							</li>
-							<li><strong>Biography:</strong>
-								<p>Certification from the National Institute of Yoga in Delhi, followed by the Yoga for
-									Wellness Instructor course and a Post Graduate Diploma in Yoga Teacher from the
-									Maharishi Dayanand Vocational Training Institute in India.</p>
-							</li>
-						</ul>
-						<a href="https://wa.link/tm1jb3" class="site-btn sb-gradient">Book Now</a>
-					</div>
-				</div>
-				<div class="trainer-details-text">
-					<h3>About Myself</h3>
-					<p>Since childhood, I was immersed in the teachings of Sanatan Vedic Dharma, inspired by my
-						grandfather and father who read the Bhagavad Gita daily. My fascination with yoga began in the
-						fifth grade and deepened as I explored Shatkarma kriyas by the seventh grade. Reading Patanjali
-						Yog Darshan ignited a lifelong passion for yoga.</p>
-					<p>Over the past 3 to 4 years, I have been conducting yoga sessions both online and offline,
-						adapting to changing circumstances while staying committed to my practice.</p>
-					<p>
-						In 2020, I founded Sanskar Yoga Studio. Despite the challenges of the lockdown, I have resumed
-						operations, offering a variety of yoga classes including home sessions. My expertise includes
-						Patanjali Yoga Darshan, Ashtanga Yoga, yoga nidra, hatha yoga, shatkarma, pranayama, and
-						meditation.
-					</p>
-					<p>Recently, under the guidance of Prashant Acharya ji at Vedic Gurukul Alwar, I have furthered my
-						studies in Nyaya Darshan, Bhagavad Gita, and Yoga Darshan. I remain dedicated to exploring and
-						teaching the profound philosophies of yoga.</p>
-					<p>Join me on a journey to inner peace and holistic wellness through the transformative power of
-						yoga.</p>
-					<!-- <ul>
-						<li><i class="material-icons">check_circle</i>Gold Medal for International Yoga Championship
-							2012.</li>
-						<li><i class="material-icons">check_circle</i>Silver Medal of All High Schools Championship and
-							Indian Yoga Club in 2010.</li>
-						<li><i class="material-icons">check_circle</i>Gold Medal for Jharkhand State Yoga Championship
-							in 2007.</li>
-						<li><i class="material-icons">check_circle</i>Gold Medal for East India Yoga Championship in
-							2005.</li>
-					</ul> -->
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-
-
-	<section class="review-section spad set-bg" data-setbg="img/review-bg.jpg">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 m-auto">
-					<div class="review-slider owl-carousel">
-						<div class="review-item">
-							<div class="ri-img">
-								<img src="img/classes/author/10.jpeg" alt>
-							</div>
-							<div class="ri-text text-white">
-								<p>Mukesh kumawat sir has been taking my classes for the last 6 months n he is very
-									regular n knows his subject on yoga in depth. Meditation taught by him is very nice
-									n I have learnt a lot from him in a short span.
-									He has taken a challenge for 108 days n he doing his exercise both times n following
-									a strict diet.
-									A lesson to learn n follow. He is very fit n very disciplined. God bless him 🙏</p>
-								<h4>Madhu Lodha</h4>
-
-							</div>
-						</div>
-						<div class="review-item">
-							<div class="ri-img">
-								<img src="img/classes/author/9.jpeg" alt>
-							</div>
-							<div class="ri-text text-white">
-								<p>I am a student and it is very important for a student to spend his time with energy.
-									It is not yet complete for me, it has been done to some extent. With Mukesh ji's
-									help, I started from 1st March and now my routine is also getting better, so I thank
-									Mukesh ji sir and Sanskar Yog Studio from the bottom of my heart.</p>
-								<h4>Narayansingh Gaur</h4>
-
-							</div>
-						</div>
-						<div class="review-item">
-							<div class="ri-img">
-								<img src="img/classes/author/6.jpg" alt>
-							</div>
-							<div class="ri-text text-white">
-								<p>I have been practicing yoga with Mukesh Kumawat for over a year now, and it has been
-									a life-changing experience. His deep understanding of yoga philosophy and gentle
-									guidance has helped me find inner peace and balance in my life. I highly recommend
-									Mukesh Kumawat to anyone seeking to deepen their yoga practice.</p>
-								<h4>Radhika Gupta</h4>
-
-							</div>
-						</div>
-						<div class="review-item">
-							<div class="ri-img">
-								<img src="img/classes/author/8.jpg" alt>
-							</div>
-							<div class="ri-text text-white">
-								<p>Attending Mukesh Kumawat's yoga classes has been a transformative journey for me. His
-									knowledge and expertise in various yoga techniques, combined with his compassionate
-									teaching style, create a nurturing environment for growth and self-discovery. Thanks
-									to Mukesh Kumawat, I feel more centered, stronger, and more connected to myself than
-									ever before.</p>
-								<h4>Arjun Patel</h4>
-							</div>
-						</div>
-						<div class="review-item">
-							<div class="ri-img">
-								<img src="img/classes/author/7.jpg" alt>
-							</div>
-							<div class="ri-text text-white">
-								<p>I cannot express enough gratitude for the positive impact Mukesh Kumawat has had on
-									my life through yoga. His dedication, patience, and encouragement have inspired me
-									to push past my limits and embrace the full potential of my practice. Thanks to
-									Mukesh Kumawat, I feel healthier, happier, and more aligned with my true self.</p>
-								<h4>Priya Sharma</h4>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-
-
-
-	<section id="Pricing1" class="pricing-section spad" style="padding-bottom: 0px;">
-		<div class="container">
-			<div class="section-title text-center">
-				<img src="img/icons/logo-icon.png" alt>
-				<h2>Pricing plans</h2>
-				<p>Practice Yoga to Perfect Physical Beauty, Nurture Your Soul, and Embrace Life Fully!</p>
-			</div>
-		</div>
-	</section>
-
-	<section style="padding-bottom: 100px;">
-		<div class="container">
-			<div class="table-wrapper">
-				<table>
-					<thead>
-						<tr>
-							<th>
-								<div>
-									Select your plan
-									<div class="svg-wrapper">
-										<svg viewBox="0 0 24 24">
-											<path
-												d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 17v-4h-8v-2h8v-4l6 5-6 5z" />
-										</svg>
-									</div>
-								</div>
-							</th>
-							<th>
-								<div class="heading">3 Month</div>
-								<div class="info">
-									<div class="amount">₹ <strike>3000</strike></div>
-									<div><sub>-33 Off</sub></div>
-									<div class="amount" style="font-size: 2.5rem;">₹ 1999</div>
-									<button type="button"><a href="https://wa.me/message/WS733LROJPJXJ1">Buy Now</a></button>
-								</div>
-							</th>
-							<th>
-								<div class="heading">6 Month</div>
-								<div class="info">
-									<div class="amount">₹ <strike>6000</strike></div>
-									<div><sub>-50 Off</sub></div>
-									<div class="amount" style="font-size: 2.5rem;">₹ 2999</div>
-									<button type="button"><a href="https://wa.me/message/WS733LROJPJXJ1">Buy Now</a></button>
-								</div>
-							</th>
-							<th>
-								<div class="heading">12 Month</div>
-								<div class="info">
-									<div class="amount">₹ <strike>12000</strike></div>
-									<div><sub>-67 Off</sub></div>
-									<div class="amount" style="font-size: 2.5rem;">₹3999</div>
-									<button type="button"><a href="https://wa.me/message/WS733LROJPJXJ1">Buy Now</a></button>
-								</div>
-							</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>Yoga Everyday</td>
-							<td>
-								<svg class="starter" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
-								</svg>
-							</td>
-							<td>
-								<svg class="essential" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
-								</svg>
-							</td>
-							<td>
-								<svg class="professional" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
-								</svg>
-							</td>
-						</tr>
-						<tr>
-							<td>Dance & Stretch</td>
-							<td>
-								<svg class="starter" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
-								</svg>
-							</td>
-							<td>
-								<svg class="essential" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
-								</svg>
-							</td>
-							<td>
-								<svg class="professional" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
-								</svg>
-							</td>
-						</tr>
-						<tr>
-							<td>Flexible Batch timings</td>
-							<td>
-								<svg class="starter" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
-								</svg>
-							</td>
-							<td>
-								<svg class="essential" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
-								</svg>
-							</td>
-							<td>
-								<svg class="professional" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
-								</svg>
-							</td>
-						</tr>
-						<tr>
-							<td>Habit Tracking</td>
-							<td>
-								<svg class="starter" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
-								</svg>
-							</td>
-							<td>
-								<svg class="essential" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
-								</svg>
-							</td>
-							<td>
-								<svg class="professional" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
-								</svg>
-							</td>
-						</tr>
-						<tr>
-							<td>Self Healing Marma</td>
-							<td>
-								<svg class="not-included" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z" />
-								</svg>
-							</td>
-							<td>
-								<svg class="not-included" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z" />
-								</svg>
-							</td>
-							<td>
-								<svg class="professional" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
-								</svg>
-							</td>
-						</tr>
-						<tr>
-							<td>Hand Mudras</td>
-							<td>
-								<svg class="not-included" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z" />
-								</svg>
-							</td>
-							<td>
-								<svg class="not-included" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z" />
-								</svg>
-							</td>
-							<td>
-								<svg class="professional" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
-								</svg>
-							</td>
-						</tr>
-						<tr>
-							<td>Mindful Journaling</td>
-							<td>
-								<svg class="not-included" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z" />
-								</svg>
-							</td>
-							<td>
-								<svg class="essential" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
-								</svg>
-							</td>
-							<td>
-								<svg class="professional" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
-								</svg>
-							</td>
-						</tr>
-						<tr>
-							<td>Juice Fast</td>
-							<td>
-								<svg class="not-included" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z" />
-								</svg>
-							</td>
-							<td>
-								<svg class="essential" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
-								</svg>
-							</td>
-							<td>
-								<svg class="professional" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
-								</svg>
-							</td>
-						</tr>
-						<tr>
-							<td>Physiotherapy Consultation</td>
-							<td>
-								<svg class="starter" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
-								</svg>
-							</td>
-							<td>
-								<svg class="essential" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
-								</svg>
-							</td>
-							<td>
-								<svg class="professional" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
-								</svg>
-							</td>
-						</tr>
-						<tr>
-							<td>Water Reminders</td>
-							<td>
-								<svg class="starter" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
-								</svg>
-							</td>
-							<td>
-								<svg class="essential" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
-								</svg>
-							</td>
-							<td>
-								<svg class="professional" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
-								</svg>
-							</td>
-						</tr>
-						<tr>
-							<td>Community Sessions</td>
-							<td>
-								<svg class="starter" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
-								</svg>
-							</td>
-							<td>
-								<svg class="essential" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
-								</svg>
-							</td>
-							<td>
-								<svg class="professional" viewBox="0 0 24 24">
-									<path
-										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
-								</svg>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</section>
-
-
-	<section id="contact1" class="page-top-section set-bg" data-setbg="img/page-top-bg.jpg">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-7 m-auto text-white">
-					<h2>Contact</h2>
-					<p>We'd love to hear from you! Whether you have questions about our classes, need assistance with
-						bookings, or simply want to learn more about SANSKAR YOGA STUDIO, feel free to reach out.</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-	<section class="contact-page-section spad overflow-hidden">
-		<div class="container">
-			<div class="contact-map"><iframe
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57694.02933171134!2d74.58017530443985!3d25.341913719962747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3968c34e0d6ce2a1%3A0x183fe5996cf98bb3!2sSanskar%20Yog%20Studio!5e0!3m2!1sen!2sin!4v1716922090654!5m2!1sen!2sin"
-					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-					referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-			<div class="row">
-				<div class="col-lg-4">
-					<div class="con-info">
-						<h3>Visit the SANSKAR YOGA STUDIO</h3>
-						<ul>
-							<li><i class="material-icons">map</i>2nd Floor, Pathak complex, Nehru Rd, Bhimganj, Manikya
-								Nagar, Bhilwara, Rajasthan 311001</li>
-						</ul>
-					</div>
-					<div class="con-info">
-						<h3>Message Us</h3>
-						<ul>
-							<li><i class="material-icons">map</i>+91 97858 48405</li>
-							<li><i class="material-icons">map</i>sanskaryogastudio@gmail.com
-							</li>
-						</ul>
-					</div>
-					<div class="con-info">
-						<h3>Opening Hours</h3>
-						<ul>
-							<li><i class="material-icons">map</i>Mon - Sun: 6:00am - 08:00pm</li>
-						</ul>
-					</div>
-					<div class="contact-social">
-						<a href="https://www.facebook.com/Mukesh.kumawat21?mibextid=ZbWKwL"><i
-								class="fa fa-facebook"></i></a>
-						<a href="https://www.instagram.com/themukesh.k?igsh=MTJkazE0N25tOHoyMw=="><i
-								class="fa fa-instagram"></i></a>
-
-						<a href="https://youtube.com/@ashtangaa?si=mzz8ym3bxGcq2JVc"><i
-								class="fa fa-youtube-play"></i></a>
-					</div>
-				</div>
-				<div class="col-lg-8">
-					<form action="https://api.web3forms.com/submit" method="POST" class="singup-form contact-form">
-						<input type="hidden" name="access_key" value="fe52411e-9b4a-4baa-9cac-3bda964cc72b">
-						<div class="row">
-							<div class="col-md-6">
-								<input name="name" type="text" placeholder="First Name">
-							</div>
-							<div class="col-md-6">
-								<input name="name" type="text" placeholder="Last Name">
-							</div>
-							<div class="col-md-6">
-								<input name="email" type="text" placeholder="Your Email">
-							</div>
-							<div class="col-md-6">
-								<input name="Phone No." type="text" placeholder="Phone Number">
-							</div>
-							<div class="col-md-12">
-								<textarea name="Message" placeholder="Message"></textarea>
-								<button class="site-btn sb-gradient">Send message</button>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-	<div class="gallery-section">
-		<div class="gallery-slider owl-carousel">
-			<div class="gs-item">
-				<img src="img/gallery/8.jpeg" alt>
-				<div class="gs-hover">
-					<a href="https://www.instagram.com/themukesh.k?igsh=MTJkazE0N25tOHoyMw=="><i
-							class="fa fa-instagram"></i></a>
-
-				</div>
-			</div>
-			<div class="gs-item">
-				<img src="img/gallery/9.jpeg" alt>
-				<div class="gs-hover">
-					<a href="https://www.facebook.com/Mukesh.kumawat21?mibextid=ZbWKwL"><i
-							class="fa fa-facebook"></i></a>
-
-				</div>
-			</div>
-			<div class="gs-item">
-				<img src="img/gallery/12.jpeg" alt>
-				<div class="gs-hover">
-					<a href="https://youtube.com/@ashtangaa?si=mzz8ym3bxGcq2JVc"><i class="fa fa-youtube-play"></i></a>
-
-				</div>
-			</div>
-			<div class="gs-item">
-				<img src="img/gallery/13.jpeg" alt>
-				<div class="gs-hover">
-					<a href="https://www.instagram.com/themukesh.k?igsh=MTJkazE0N25tOHoyMw=="><i
-							class="fa fa-instagram"></i></a>
-
-				</div>
-			</div>
-			<div class="gs-item">
-				<img src="img/gallery/10.jpeg" alt>
-				<div class="gs-hover">
-					<a href="https://www.facebook.com/Mukesh.kumawat21?mibextid=ZbWKwL"><i
-							class="fa fa-facebook"></i></a>
-
-				</div>
-			</div>
-			<div class="gs-item">
-				<img src="img/gallery/11.jpeg" alt>
-				<div class="gs-hover">
-					<a href="https://youtube.com/@ashtangaa?si=mzz8ym3bxGcq2JVc"><i class="fa fa-youtube-play"></i></a>
-
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-	<footer class="footer-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3 col-sm-6">
-					<div class="footer-widget">
-						<div class="about-widget">
-							<img src="img/logo2.png" alt>
-							<p>Transform Your Life, One Pose at a Time</p>
-							<ul>
-								<li><i class="material-icons">phone</i>+91 97858 48405</li>
-								<li><i class="material-icons">email</i>sanskaryogastudio@gmail.com
-								</li>
-								<li><i class="material-icons">map</i>2nd Floor, Pathak complex, Nehru Rd, Bhimganj,
-									Manikya Nagar, Bhilwara, Rajasthan 311001</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="footer-widget pl-0 pl-lg-5">
-						<h2 class="fw-title">Company</h2>
-						<ul>
-							<li><a href="index.html#">Online Education</a></li>
-							<li><a href="index.html#">Gallery</a></li>
-							<li><a href="index.html#">Special Issues</a></li>
-							<li><a href="index.html#">Privacy Policy</a></li>
-							<li><a href="index.html#">Contact Us</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-2 col-sm-6">
-					<div class="footer-widget">
-						<h2 class="fw-title">About Us</h2>
-						<ul>
-							<li><a href="index.html#">Our Vision</a></li>
-							<li><a href="index.html#">Our Mission</a></li>
-							<li><a href="index.html#">Meet The Team</a></li>
-							<li><a href="index.html#">Introduce</a></li>
-							<li><a href="index.html#">Customer Service</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6">
-					<div class="footer-widget pl-0 pl-lg-5">
-						<h2 class="fw-title">Open time</h2>
-						<ul>
-							<li><i class="material-icons">alarm_on</i>Mon - Sun: 6:00am - 08:00pm</li>
-						</ul>
-						<form class="infor-form">
-							<input type="text" placeholder="Your Email">
-							<button><img src="img/icons/send.png" alt></button>
-						</form>
-					</div>
-				</div>
-			</div>
-			<div class="footer-bottom">
-				<div class="row">
-					<div class="col-md-4">
-						<div class="footer-social">
-							<a href="https://www.facebook.com/Mukesh.kumawat21?mibextid=ZbWKwL"><i
-									class="fa fa-facebook"></i></a>
-
-							<a href="https://www.instagram.com/themukesh.k?igsh=MTJkazE0N25tOHoyMw=="><i
-									class="fa fa-instagram"></i></a>
-
-							<a href="https://youtube.com/@ashtangaa?si=mzz8ym3bxGcq2JVc"><i
-									class="fa fa-youtube-play"></i></a>
-						</div>
-					</div>
-					<div class="col-md-8 text-md-right">
-						<div class="copyright">
-							Copyright &copy;
-							<script data-cfasync="false"
-								src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-							<script>document.write(new Date().getFullYear());</script> All rights reserved
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-
-	
-
-	<div class="search-model set-bg" data-setbg="img/search-bg.jpg">
-		<div class="h-100 d-flex align-items-center justify-content-center">
-			<div class="search-close-switch"><i class="material-icons">close</i></div>
-			<form class="search-moderl-form">
-				<input type="text" id="search-input" placeholder="Search">
-				<button><img src="img/icons/search-2.png" alt></button>
-			</form>
-		</div>
-	</div>
-
-
-	<script src="js/vendor/jquery-3.2.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.slicknav.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/jquery.nice-select.min.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/main.js"></script>
-
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		gtag('config', 'UA-23581568-13');
-	</script>
-
-
-
-
-	<!-- <div style="width: 60px; height: 60px; position: fixed;right: 10px; bottom: 10px;">
-		<a href="https://api.whatsapp.com/send?phone=919785848405"><img src="img/Whatsapplogo.png" alt=""
-				style="width: 60px; height: 60px;"></a>
-	</div> -->
-
-	<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-	<div class="elfsight-app-3056d497-49c5-4870-90f2-a0ea60642634" data-elfsight-app-lazy></div>
-
-
+  <div class="topbar">
+    <div class="container">
+      <span>Traditional Yoga • Pranayama • Meditation</span>
+      <span>Online Classes • Worldwide</span>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Ashtangaa Yoga Home">
+        <div class="brand-mark">ॐ</div>
+        <div class="brand-text">
+          <strong>Ashtangaa Yoga</strong>
+          <span>with Mukesh</span>
+        </div>
+      </a>
+
+      <button class="mobile-btn" id="mobileBtn" aria-label="Open menu">☰</button>
+
+      <nav class="menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="classes.html">Yoga Classes</a>
+        <a href="trainer.html">About Mukesh</a>
+        <a href="blog.html">Blog</a>
+        <a class="btn" href="contact.html">Book a Class</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Traditional Yoga • Modern Guidance</div>
+          <h1>Build a Strong Body. <br>Calm the Mind.<span>Ashtangaa Yoga with Mukesh</span></h1>
+          <p>Online yoga classes for beginners and experienced practitioners — combining yoga asana, pranayama and meditation with personal guidance.</p>
+          <div class="hero-actions">
+            <a class="btn" href="contact.html">Book Your Personal Class</a>
+            <a class="btn outline" href="classes.html">Explore Yoga Classes</a>
+          </div>
+          <div class="hero-note">Online sessions • Personalized guidance • Students worldwide</div>
+        </div>
+
+        <div class="hero-visual">
+          <img src="img/hero-slider/2.png" alt="Yoga practice with Mukesh - Ashtangaa Yoga">
+          <div class="badge">🧘 Personal Guidance<small>Practice at your own pace</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Explore Your Practice</div>
+          <h2>Yoga for Your Goals</h2>
+          <p>Choose a focused practice or work with Mukesh to create a routine based on your needs, experience and lifestyle.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <img src="img/classes/5.jpg" alt="Meditation practice">
+            <div class="card-body">
+              <h3>Meditation</h3>
+              <p>Develop calmness, awareness and a more focused mind through guided meditation.</p>
+              <a class="link" href="meditation.html">Learn More →</a>
+            </div>
+          </article>
+          <article class="card">
+            <img src="img/classes/6.jpg" alt="Pranayama breathing practice">
+            <div class="card-body">
+              <h3>Pranayama</h3>
+              <p>Learn traditional breathing practices for a balanced and mindful daily routine.</p>
+              <a class="link" href="pranayama.html">Learn More →</a>
+            </div>
+          </article>
+          <article class="card">
+            <img src="img/classes/3.jpg" alt="Yoga therapy and personalized yoga">
+            <div class="card-body">
+              <h3>Personal Yoga</h3>
+              <p>One-to-one online sessions designed around your goals, level and practice needs.</p>
+              <a class="link" href="personal-yoga.html">Learn More →</a>
+            </div>
+          </article>
+          <article class="card">
+            <img src="img/classes/7.webp" alt="Advanced yoga practice">
+            <div class="card-body">
+              <h3>Advanced Yoga</h3>
+              <p>Deepen strength, mobility, concentration and consistency with progressive practice.</p>
+              <a class="link" href="online-yoga-classes.html">Learn More →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container split">
+        <div class="photo">
+          <img src="img/about.png" alt="Mukesh teaching traditional yoga">
+        </div>
+        <div>
+          <div class="eyebrow">Why Ashtangaa Yoga</div>
+          <h2>Yoga That Fits Your Journey</h2>
+          <p>Yoga is more than physical postures. A consistent practice can support strength, mobility, breathing awareness, concentration and inner calm.</p>
+
+          <div class="checks">
+            <div class="check"><i>✓</i><div><strong>Personalized Guidance</strong><span>Learn with attention to your level, goals and limitations.</span></div></div>
+            <div class="check"><i>✓</i><div><strong>Traditional Practices</strong><span>Explore asana, pranayama, meditation and yogic discipline in a practical way.</span></div></div>
+            <div class="check"><i>✓</i><div><strong>Beginner Friendly</strong><span>You can start even if you have never practiced yoga before.</span></div></div>
+            <div class="check"><i>✓</i><div><strong>Online Worldwide</strong><span>Practice from home with live guidance through online sessions.</span></div></div>
+          </div>
+
+          <a class="btn" href="about-mukesh.html">Meet Mukesh →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Popular Programs</div>
+          <h2>Find the Right Practice</h2>
+          <p>Focused online yoga programs for different stages, goals and lifestyles.</p>
+        </div>
+
+        <div class="program-grid">
+          <div class="program"><div class="icon">🌿</div><h3>Yoga for Beginners</h3><p>Start safely with simple, structured yoga practices.</p><a class="link" href="yoga-for-beginners.html">Explore →</a></div>
+          <div class="program"><div class="icon">⚖️</div><h3>Weight Loss Yoga</h3><p>Build an active routine with yoga, movement and mindful habits.</p><a class="link" href="weight-loss-yoga.html">Explore →</a></div>
+          <div class="program"><div class="icon">🤰</div><h3>Prenatal Yoga</h3><p>Gentle, supportive yoga practices during pregnancy with appropriate guidance.</p><a class="link" href="prenatal-yoga.html">Explore →</a></div>
+          <div class="program"><div class="icon">🧘</div><h3>Postnatal Yoga</h3><p>Gradually rebuild movement, strength and body awareness after childbirth.</p><a class="link" href="postnatal-yoga.html">Explore →</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cream">
+      <div class="container split">
+        <div>
+          <div class="eyebrow">1-to-1 Online Yoga</div>
+          <h2>Personal Yoga Guidance From Home</h2>
+          <p>If you want a practice built around your specific goals, one-to-one sessions provide a more personal approach than a general class.</p>
+          <div class="mini-grid">
+            <div class="mini"><strong>Flexible Timing</strong><span>Choose a schedule that works for your routine.</span></div>
+            <div class="mini"><strong>Personal Attention</strong><span>Practice with direct guidance throughout the session.</span></div>
+            <div class="mini"><strong>Goal Based</strong><span>Build a plan around your experience and priorities.</span></div>
+            <div class="mini"><strong>Online</strong><span>Join from your home, anywhere in the world.</span></div>
+          </div>
+          <div class="hero-actions"><a class="btn" href="personal-yoga.html">Explore 1-to-1 Yoga</a><a class="btn outline" href="contact.html">Ask About Classes</a></div>
+        </div>
+        <div class="photo">
+          <img src="img/1.jpg" alt="Online personal yoga class with Mukesh">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="youtube">
+          <div class="eyebrow" style="color:#d9bd78">Free Yoga on YouTube</div>
+          <h2>Practice With Mukesh on YouTube</h2>
+          <p>Join regular live yoga sessions and explore free yoga, pranayama and wellness content on the Ashtangaa Yoga YouTube channel.</p>
+          <a class="btn gold" href="https://youtube.com/@ashtangayogawithmukesh" target="_blank" rel="noopener">Visit YouTube Channel →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Student Experiences</div>
+          <h2>What Students Say</h2>
+          <p>Real practice is built through consistency, guidance and patience.</p>
+        </div>
+        <div class="testimonial-grid">
+          <div class="quote"><p>“Mukesh sir has been taking my classes for the last 6 months. He is very regular and knows his subject on yoga in depth. Meditation taught by him is very nice.”</p><strong>Madhu Lodha</strong></div>
+          <div class="quote"><p>“With Mukesh ji's help, I started my practice and my routine is getting better. I thank Mukesh ji sir from the bottom of my heart.”</p><strong>Narayan Singh Gaur</strong></div>
+          <div class="quote"><p>“The guidance and discipline have helped me stay consistent with my practice and understand yoga more deeply.”</p><strong>Ashtangaa Yoga Student</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Frequently Asked Questions</div>
+          <h2>Before You Start</h2>
+        </div>
+        <div class="faq">
+          <details><summary>Can beginners join online yoga classes?</summary><p>Yes. Beginners can start with simple practices and progress gradually according to their comfort and experience.</p></details>
+          <details><summary>Do you offer one-to-one personal yoga classes?</summary><p>Yes. One-to-one online sessions are available for students who want more personalized guidance.</p></details>
+          <details><summary>Can I practice yoga from outside India?</summary><p>Yes. Online sessions can be attended from anywhere with a stable internet connection. Class timing can be discussed according to availability.</p></details>
+          <details><summary>Do I need to be flexible before starting yoga?</summary><p>No. Flexibility is something that can develop gradually through appropriate practice. You do not need to be flexible to begin.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="eyebrow">Start Your Practice</div>
+        <h2>Ready to Begin Your Yoga Journey?</h2>
+        <p>Tell us about your goals and find the right online yoga practice for you.</p>
+        <a class="btn" href="contact.html">Book a Yoga Class →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Ashtangaa Yoga</h3>
+          <p>Traditional Yoga, Pranayama and Meditation with Mukesh. Online guidance for students in India and worldwide.</p>
+        </div>
+        <div>
+          <h3>Yoga</h3>
+          <a href="online-yoga-classes.html">Online Yoga Classes</a>
+          <a href="personal-yoga.html">1-to-1 Personal Yoga</a>
+          <a href="yoga-for-beginners.html">Yoga for Beginners</a>
+          <a href="weight-loss-yoga.html">Weight Loss Yoga</a>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <a href="about-mukesh.html">About Mukesh</a>
+          <a href="pranayama.html">Pranayama</a>
+          <a href="meditation.html">Meditation</a>
+          <a href="contact.html">Contact / Book a Class</a>
+        </div>
+      </div>
+      <div class="copyright">© 2026 Ashtangaa Yoga with Mukesh. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileBtn = document.getElementById('mobileBtn');
+    const menu = document.getElementById('menu');
+    mobileBtn.addEventListener('click', () => menu.classList.toggle('open'));
+    document.querySelectorAll('#menu a').forEach(link => {
+      link.addEventListener('click', () => menu.classList.remove('open'));
+    });
+  </script>
 </body>
-
 </html>
