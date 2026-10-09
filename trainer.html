@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Our Yoga Teachers | Ashtangaa Yoga with Mukesh</title>
-  <meta name="description" content="Meet the yoga teachers at Ashtangaa Yoga. Learn yoga, pranayama, meditation and traditional yogic practices with Mukesh Kumawat.">
+  <meta name="description" content="Meet the yoga teachers at Ashtangaa Yoga. Explore online yoga, pranayama, meditation and book a free demo class.">
   <meta name="theme-color" content="#123d2b">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,9 +37,17 @@
       line-height: 1.7;
     }
 
+    body.modal-open {
+      overflow: hidden;
+    }
+
     a {
       color: inherit;
       text-decoration: none;
+    }
+
+    button, input, select {
+      font: inherit;
     }
 
     .site-header {
@@ -85,6 +93,7 @@
     }
 
     .brand-name {
+      display: block;
       font-family: "Playfair Display", serif;
       font-size: 20px;
       font-weight: 700;
@@ -92,6 +101,7 @@
     }
 
     .brand-subtitle {
+      display: block;
       color: #e4d7a7;
       font-size: 11px;
       letter-spacing: 1.5px;
@@ -186,6 +196,7 @@
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 26px;
+      align-items: stretch;
     }
 
     .teacher-card {
@@ -194,6 +205,7 @@
       overflow: hidden;
       border: 1px solid #e5e6dc;
       box-shadow: 0 8px 28px rgba(18, 61, 43, 0.06);
+      min-width: 0;
     }
 
     .teacher-photo {
@@ -240,13 +252,23 @@
       margin-bottom: 15px;
     }
 
-    .teacher-info {
-      padding: 26px;
+    /* Profile details on the left, action buttons on the right */
+    .teacher-info-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 235px;
+      gap: 22px;
+      padding: 25px;
+      align-items: start;
     }
 
-    .teacher-info h3 {
+    .teacher-info-main {
+      min-width: 0;
+    }
+
+    .teacher-info-main h3 {
       font-family: "Playfair Display", serif;
       font-size: 25px;
+      line-height: 1.3;
       color: var(--green);
       margin-bottom: 4px;
     }
@@ -258,7 +280,7 @@
       margin-bottom: 15px;
     }
 
-    .teacher-info p {
+    .teacher-info-main p {
       color: var(--muted);
       font-size: 14px;
       margin-bottom: 12px;
@@ -269,6 +291,7 @@
       margin-top: 14px;
       border-top: 1px solid #e8e9e1;
       font-size: 13px;
+      color: var(--text);
     }
 
     .demo-note {
@@ -288,13 +311,102 @@
       background: var(--green);
       color: white;
       padding: 11px 17px;
+      border: 0;
       border-radius: 6px;
       font-size: 13px;
       font-weight: 700;
+      cursor: pointer;
+      text-align: center;
     }
 
     .profile-button:hover {
       background: var(--green-light);
+    }
+
+    /* WhatsApp and demo booking buttons */
+    .teacher-actions {
+      width: 100%;
+      padding: 17px;
+      background: #fffdf7;
+      border: 1px solid #e0d1a4;
+      border-radius: 12px;
+    }
+
+    .actions-heading {
+      color: var(--green);
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .action-btn {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      width: 100%;
+      padding: 12px 10px;
+      margin-top: 10px;
+      border-radius: 8px;
+      text-align: left;
+      cursor: pointer;
+      font-size: 12px;
+      line-height: 1.4;
+      font-weight: 700;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .action-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 14px rgba(0, 0, 0, .12);
+    }
+
+    .whatsapp-btn {
+      color: white;
+      background: var(--green);
+      border: 1px solid var(--gold);
+    }
+
+    .demo-btn {
+      color: #183322;
+      background: #f1dfad;
+      border: 1px solid #c6a04a;
+    }
+
+    .action-icon {
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .action-copy {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .action-copy strong {
+      display: block;
+      font-size: 12px;
+    }
+
+    .action-copy small {
+      display: block;
+      font-size: 10px;
+      font-weight: 500;
+      margin-top: 3px;
+      opacity: .88;
+    }
+
+    .action-arrow {
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .actions-note {
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1.5;
+      text-align: center;
+      margin-top: 12px;
     }
 
     .mission {
@@ -365,6 +477,146 @@
       color: var(--gold);
     }
 
+    /* Free demo booking popup */
+    .demo-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      background: rgba(6, 25, 16, .78);
+      padding: 18px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      overflow-y: auto;
+    }
+
+    .demo-overlay.is-open {
+      display: flex;
+    }
+
+    .demo-modal {
+      position: relative;
+      width: 100%;
+      max-width: 480px;
+      max-height: 92vh;
+      overflow-y: auto;
+      background: #fffdf7;
+      color: var(--text);
+      border: 1px solid var(--gold);
+      border-radius: 16px;
+      padding: 27px;
+      box-shadow: 0 18px 55px rgba(0, 0, 0, .25);
+    }
+
+    .demo-close {
+      position: absolute;
+      top: 8px;
+      right: 13px;
+      border: 0;
+      background: transparent;
+      color: var(--green);
+      font-size: 30px;
+      cursor: pointer;
+      line-height: 1.4;
+    }
+
+    .demo-eyebrow {
+      color: #967521;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 7px;
+    }
+
+    .demo-modal h2 {
+      color: var(--green);
+      font-family: "Playfair Display", serif;
+      font-size: 26px;
+      line-height: 1.3;
+      margin: 0 25px 8px 0;
+    }
+
+    .demo-intro {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    .demo-teacher-name {
+      background: #e9eee5;
+      border-left: 3px solid var(--gold);
+      padding: 8px 10px;
+      color: var(--green);
+      font-size: 12px;
+      margin-bottom: 15px;
+    }
+
+    .demo-modal label {
+      display: block;
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 700;
+      margin: 12px 0 5px;
+    }
+
+    .demo-modal input,
+    .demo-modal select {
+      display: block;
+      width: 100%;
+      min-height: 44px;
+      padding: 10px 11px;
+      border: 1px solid #d8d8c9;
+      border-radius: 7px;
+      background: white;
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .demo-modal input:focus,
+    .demo-modal select:focus {
+      outline: 2px solid #b99a4b;
+      outline-offset: 1px;
+    }
+
+    .demo-submit {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      margin-top: 20px;
+      border: 1px solid var(--gold);
+      border-radius: 8px;
+      background: var(--green);
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .demo-submit:hover {
+      background: var(--green-light);
+    }
+
+    .demo-privacy {
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.5;
+      margin-top: 11px;
+    }
+
+    @media (max-width: 1000px) {
+      .teacher-info-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .teacher-actions {
+        max-width: 100%;
+      }
+
+      .action-btn {
+        padding: 13px;
+      }
+    }
+
     @media (max-width: 760px) {
       .nav-wrap {
         flex-direction: column;
@@ -398,8 +650,27 @@
         height: 320px;
       }
 
-      .teacher-info {
+      .teacher-info-layout {
         padding: 22px;
+        gap: 20px;
+      }
+
+      .teacher-info-main h3 {
+        font-size: 24px;
+      }
+
+      .mission-inner {
+        padding: 45px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .demo-modal {
+        padding: 23px 17px;
+      }
+
+      .demo-modal h2 {
+        font-size: 23px;
       }
     }
   </style>
@@ -447,122 +718,263 @@
       <h2>Learn, Practise and Grow</h2>
       <p>
         Meet our lead teacher and explore the teaching team.
-        Additional instructor profiles on this page are temporary
-        placeholders and will be updated when the team is confirmed.
+        Additional instructor profiles are temporary placeholders
+        and will be updated when the team is confirmed.
       </p>
     </div>
 
     <div class="teacher-grid">
 
-      <!-- MUKESH PROFILE
-           IMPORTANT: Replace img/mukesh.jpg below with the exact path
-           of your existing photograph in the GitHub repository. -->
+      <!-- MUKESH KUMAWAT
+           To change the WhatsApp number later, edit this card's
+           data-whatsapp value only. Use country code and digits,
+           without +, spaces or hyphens. -->
 
-      <article class="teacher-card">
+      <article class="teacher-card"
+        data-teacher="Mukesh Kumawat"
+        data-whatsapp="919785848405">
+
         <div class="teacher-photo">
-          
-<img
-  src="img/classes/author/5.jpg"
-  alt="Mukesh Kumawat - Founder and Lead Yoga Teacher"
-  onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
-  >
+          <img
+            src="img/classes/author/5.jpg"
+            alt="Mukesh Kumawat - Founder and Lead Yoga Teacher"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+          >
           <div class="photo-placeholder" style="display:none;">
             <div class="initials">MK</div>
             <strong>Mukesh Kumawat</strong>
-            <span>Replace the image path with your real photo</span>
           </div>
         </div>
 
-        <div class="teacher-info">
-          <h3>Mukesh Kumawat</h3>
-          <div class="role">Founder &amp; Lead Yoga Teacher</div>
-          <p>
-            Mukesh shares yoga and traditional yogic practices through
-            Ashtangaa Yoga, helping students build a consistent practice
-            rooted in awareness, discipline and balance.
-          </p>
-          <p>
-            His teaching interests include asana practice, pranayama,
-            meditation and the philosophical foundations of yoga.
-          </p>
-          <div class="qualification">
-            <strong>Education:</strong> Postgraduate (M.A.) in
-            Traditional Yoga and Philosophy.
+        <div class="teacher-info-layout">
+          <div class="teacher-info-main">
+            <h3>Mukesh Kumawat</h3>
+            <div class="role">Founder &amp; Lead Yoga Teacher</div>
+
+            <p>
+              Mukesh shares yoga and traditional yogic practices through
+              Ashtangaa Yoga, helping students build a consistent practice
+              rooted in awareness, discipline and balance.
+            </p>
+
+            <p>
+              His teaching interests include asana practice, pranayama,
+              meditation and the philosophical foundations of yoga.
+            </p>
+
+            <div class="qualification">
+              <strong>Education:</strong> Postgraduate (M.A.) in
+              Traditional Yoga and Philosophy.
+            </div>
+
+            <a class="profile-button" href="about-mukesh.html">
+              Read Mukesh's Story
+            </a>
           </div>
-          <a class="profile-button" href="about-mukesh.html">
-            Read Mukesh's Story
-          </a>
+
+          <aside class="teacher-actions">
+            <p class="actions-heading">Start Your Yoga Journey</p>
+
+            <button type="button" class="action-btn whatsapp-btn"
+              data-action="chat">
+              <span class="action-icon">💬</span>
+              <span class="action-copy">
+                <strong>WhatsApp Chat / Booking</strong>
+                <small>Ask about classes &amp; fees</small>
+              </span>
+              <span class="action-arrow">→</span>
+            </button>
+
+            <button type="button" class="action-btn demo-btn"
+              data-action="demo">
+              <span class="action-icon">📅</span>
+              <span class="action-copy">
+                <strong>Book a Free Demo Class</strong>
+                <small>Fill out a short form</small>
+              </span>
+              <span class="action-arrow">→</span>
+            </button>
+
+            <p class="actions-note">
+              Online Yoga · Personal Guidance
+            </p>
+          </aside>
         </div>
       </article>
 
-      <!-- TEMPORARY DEMO PROFILE: replace with a real team member later -->
+      <!-- TEMPORARY DEMO PROFILE
+           Replace REPLACE_WITH_NUMBER with this teacher's WhatsApp
+           number when the profile is assigned to a real teacher. -->
 
-      <article class="teacher-card">
+      <article class="teacher-card"
+        data-teacher="Ananya Sharma"
+        data-whatsapp="REPLACE_WITH_NUMBER">
+
         <div class="photo-placeholder">
           <div class="initials">AS</div>
           <strong>Instructor Profile</strong>
           <span>Photo to be added</span>
         </div>
-        <div class="teacher-info">
-          <span class="demo-note">TEMPORARY DEMO PROFILE</span>
-          <h3>Ananya Sharma</h3>
-          <div class="role">Yoga Instructor — Placeholder</div>
-          <p>
-            This sample profile is reserved for a future team member
-            who may teach foundational asanas, flexibility and
-            beginner-friendly yoga sessions.
-          </p>
-          <div class="qualification">
-            <strong>Profile status:</strong> Fictional placeholder.
-            Qualifications and experience have not been verified.
+
+        <div class="teacher-info-layout">
+          <div class="teacher-info-main">
+            <span class="demo-note">TEMPORARY DEMO PROFILE</span>
+            <h3>Ananya Sharma</h3>
+            <div class="role">Yoga Instructor — Placeholder</div>
+
+            <p>
+              This sample profile is reserved for a future team member
+              who may teach foundational asanas, flexibility and
+              beginner-friendly yoga sessions.
+            </p>
+
+            <div class="qualification">
+              <strong>Profile status:</strong> Fictional placeholder.
+              Qualifications and experience have not been verified.
+            </div>
           </div>
+
+          <aside class="teacher-actions">
+            <p class="actions-heading">Start Your Yoga Journey</p>
+
+            <button type="button" class="action-btn whatsapp-btn"
+              data-action="chat">
+              <span class="action-icon">💬</span>
+              <span class="action-copy">
+                <strong>WhatsApp Chat / Booking</strong>
+                <small>Ask about classes &amp; fees</small>
+              </span>
+              <span class="action-arrow">→</span>
+            </button>
+
+            <button type="button" class="action-btn demo-btn"
+              data-action="demo">
+              <span class="action-icon">📅</span>
+              <span class="action-copy">
+                <strong>Book a Free Demo Class</strong>
+                <small>Fill out a short form</small>
+              </span>
+              <span class="action-arrow">→</span>
+            </button>
+
+            <p class="actions-note">Online Yoga Classes</p>
+          </aside>
         </div>
       </article>
 
-      <!-- TEMPORARY DEMO PROFILE: replace with a real team member later -->
+      <!-- TEMPORARY DEMO PROFILE -->
 
-      <article class="teacher-card">
+      <article class="teacher-card"
+        data-teacher="Arjun Verma"
+
+        data-whatsapp="REPLACE_WITH_NUMBER">
+
         <div class="photo-placeholder">
           <div class="initials">AV</div>
           <strong>Instructor Profile</strong>
           <span>Photo to be added</span>
         </div>
-        <div class="teacher-info">
-          <span class="demo-note">TEMPORARY DEMO PROFILE</span>
-          <h3>Arjun Verma</h3>
-          <div class="role">Pranayama &amp; Meditation — Placeholder</div>
-          <p>
-            This sample profile is reserved for a future instructor
-            focused on breathing practices, relaxation and meditation.
-          </p>
-          <div class="qualification">
-            <strong>Profile status:</strong> Fictional placeholder.
-            Qualifications and experience have not been verified.
+
+        <div class="teacher-info-layout">
+          <div class="teacher-info-main">
+            <span class="demo-note">TEMPORARY DEMO PROFILE</span>
+            <h3>Arjun Verma</h3>
+            <div class="role">Pranayama &amp; Meditation — Placeholder</div>
+
+            <p>
+              This sample profile is reserved for a future instructor
+              focused on breathing practices, relaxation and meditation.
+            </p>
+
+            <div class="qualification">
+              <strong>Profile status:</strong> Fictional placeholder.
+              Qualifications and experience have not been verified.
+            </div>
           </div>
+
+          <aside class="teacher-actions">
+            <p class="actions-heading">Start Your Yoga Journey</p>
+
+            <button type="button" class="action-btn whatsapp-btn"
+              data-action="chat">
+              <span class="action-icon">💬</span>
+              <span class="action-copy">
+                <strong>WhatsApp Chat / Booking</strong>
+                <small>Ask about classes &amp; fees</small>
+              </span>
+              <span class="action-arrow">→</span>
+            </button>
+
+            <button type="button" class="action-btn demo-btn"
+              data-action="demo">
+              <span class="action-icon">📅</span>
+              <span class="action-copy">
+                <strong>Book a Free Demo Class</strong>
+                <small>Fill out a short form</small>
+              </span>
+              <span class="action-arrow">→</span>
+            </button>
+
+            <p class="actions-note">Online Yoga Classes</p>
+          </aside>
         </div>
       </article>
+      
+      <!-- TEMPORARY DEMO PROFILE -->
 
-      <!-- TEMPORARY DEMO PROFILE: replace with a real team member later -->
+      <article class="teacher-card"
+        data-teacher="Kavya Mehta"
+        data-whatsapp="REPLACE_WITH_NUMBER">
 
-      <article class="teacher-card">
         <div class="photo-placeholder">
           <div class="initials">KM</div>
           <strong>Instructor Profile</strong>
           <span>Photo to be added</span>
         </div>
-        <div class="teacher-info">
-          <span class="demo-note">TEMPORARY DEMO PROFILE</span>
-          <h3>Kavya Mehta</h3>
-          <div class="role">Specialized Yoga — Placeholder</div>
-          <p>
-            This sample profile is reserved for a future instructor
-            whose verified training and teaching focus can be added
-            when the team is finalized.
-          </p>
-          <div class="qualification">
-            <strong>Profile status:</strong> Fictional placeholder.
-            Qualifications and experience have not been verified.
+
+        <div class="teacher-info-layout">
+          <div class="teacher-info-main">
+            <span class="demo-note">TEMPORARY DEMO PROFILE</span>
+            <h3>Kavya Mehta</h3>
+            <div class="role">Specialized Yoga — Placeholder</div>
+
+            <p>
+              This sample profile is reserved for a future instructor
+              whose verified training and teaching focus can be added
+              when the team is finalized.
+            </p>
+
+            <div class="qualification">
+              <strong>Profile status:</strong> Fictional placeholder.
+              Qualifications and experience have not been verified.
+            </div>
           </div>
+
+          <aside class="teacher-actions">
+            <p class="actions-heading">Start Your Yoga Journey</p>
+
+            <button type="button" class="action-btn whatsapp-btn"
+              data-action="chat">
+              <span class="action-icon">💬</span>
+              <span class="action-copy">
+                <strong>WhatsApp Chat / Booking</strong>
+                <small>Ask about classes &amp; fees</small>
+              </span>
+              <span class="action-arrow">→</span>
+            </button>
+
+            <button type="button" class="action-btn demo-btn"
+              data-action="demo">
+              <span class="action-icon">📅</span>
+              <span class="action-copy">
+                <strong>Book a Free Demo Class</strong>
+                <small>Fill out a short form</small>
+              </span>
+              <span class="action-arrow">→</span>
+            </button>
+
+            <p class="actions-note">Online Yoga Classes</p>
+          </aside>
         </div>
       </article>
 
@@ -594,6 +1006,7 @@
 <footer class="site-footer">
   <div class="footer-brand">Ashtangaa Yoga</div>
   <p>Traditional Yoga · Pranayama · Meditation</p>
+
   <div class="footer-links">
     <a href="index.html">Home</a>
     <a href="about-mukesh.html">About Mukesh</a>
@@ -601,12 +1014,199 @@
     <a href="blog.html">Blog</a>
     <a href="contact.html">Contact</a>
   </div>
+
   <p>&copy; <span id="year"></span> Ashtangaa Yoga. All rights reserved.</p>
 </footer>
 
+<!-- One reusable Free Demo Class form for all teacher profiles -->
+<div id="demoModal" class="demo-overlay"
+  aria-hidden="true">
+
+  <div class="demo-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="demoTitle">
+
+    <button type="button" class="demo-close"
+      id="closeDemo" aria-label="Close booking form">×</button>
+
+    <p class="demo-eyebrow">ASHTANGAA YOGA</p>
+    <h2 id="demoTitle">Book Your Free Demo Class</h2>
+
+    <p class="demo-intro">
+      Complete the form. WhatsApp will open with your booking details.
+    </p>
+
+    <p class="demo-teacher-name">
+      Teacher: <strong id="selectedTeacher">Mukesh Kumawat</strong>
+    </p>
+
+    <form id="demoForm">
+      <label for="fullName">Full Name *</label>
+      <input id="fullName" name="fullName"
+        type="text" autocomplete="name" required>
+
+      <label for="email">Email Address *</label>
+      <input id="email" name="email"
+        type="email" autocomplete="email" required>
+
+      <label for="phone">WhatsApp Number *</label>
+      <input id="phone" name="phone"
+        type="tel" autocomplete="tel"
+        placeholder="+1, +44, +91..." required>
+
+      <label for="goal">Yoga Goal *</label>
+      <select id="goal" name="goal" required>
+        <option value="">Choose your goal</option>
+        <option>Weight Loss &amp; Fitness</option>
+        <option>Flexibility &amp; Strength</option>
+        <option>Stress Relief &amp; Relaxation</option>
+        <option>Pranayama &amp; Meditation</option>
+        <option>Yoga for Beginners</option>
+        <option>Other</option>
+      </select>
+
+      <label for="timing">Preferred Class Timing *</label>
+      <select id="timing" name="timing" required>
+        <option value="">Choose preferred timing</option>
+        <option>Morning (6 AM - 9 AM IST)</option>
+        <option>Afternoon (12 PM - 3 PM IST)</option>
+        <option>Evening (5 PM - 8 PM IST)</option>
+        <option>Flexible - Please suggest a time</option>
+      </select>
+
+      <button class="demo-submit" type="submit">
+        Continue to WhatsApp →
+      </button>
+
+      <p class="demo-privacy">
+        Your information will be added to a WhatsApp message.
+        Review it before pressing Send in WhatsApp.
+      </p>
+    </form>
+  </div>
+</div>
+
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+  const demoModal = document.getElementById("demoModal");
+  const demoForm = document.getElementById("demoForm");
+  const selectedTeacher = document.getElementById("selectedTeacher");
+
+  let activeTeacher = "Mukesh Kumawat";
+  let activeWhatsApp = "919785848405";
+
+  function isValidWhatsApp(number) {
+    return /^\d{10,15}$/.test(number || "");
+  }
+
+  function openWhatsApp(number, message) {
+    if (!isValidWhatsApp(number)) {
+      alert(
+        "This teacher's WhatsApp number has not been set yet. " +
+        "Please contact Ashtangaa Yoga for assistance."
+      );
+      return;
+    }
+
+    const url =
+      "https://wa.me/" + number +
+      "?text=" + encodeURIComponent(message);
+
+    window.open(url, "_blank", "noopener,noreferrer");
+  }
+
+  function openDemoModal(teacher, number) {
+    activeTeacher = teacher;
+    activeWhatsApp = number;
+
+    selectedTeacher.textContent = teacher;
+    demoModal.classList.add("is-open");
+    demoModal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+
+    document.getElementById("fullName").focus();
+  }
+
+  function closeDemoModal() {
+    demoModal.classList.remove("is-open");
+    demoModal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
+  }
+
+  document.querySelectorAll(".teacher-card").forEach(function(card) {
+    const teacher = card.dataset.teacher;
+    const number = card.dataset.whatsapp;
+
+    card.querySelector('[data-action="chat"]').addEventListener(
+      "click", function() {
+        const message =
+          "Namaste " + teacher + "! I am interested in your yoga classes. " +
+          "Please share the available timings and fees.";
+
+        openWhatsApp(number, message);
+      }
+    );
+
+    card.querySelector('[data-action="demo"]').addEventListener(
+      "click", function() {
+        openDemoModal(teacher, number);
+      }
+    );
+  });
+
+  document.getElementById("closeDemo").addEventListener(
+    "click", closeDemoModal
+  );
+
+  demoModal.addEventListener("click", function(event) {
+    if (event.target === demoModal) {
+      closeDemoModal();
+    }
+  });
+
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape" &&
+        demoModal.classList.contains("is-open")) {
+      closeDemoModal();
+    }
+  });
+
+  demoForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("fullName").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const goal = document.getElementById("goal").value;
+    const timing = document.getElementById("timing").value;
+
+    const message =
+      "Namaste " + activeTeacher + "!\n\n" +
+      "I would like to book a FREE demo yoga class.\n\n" +
+      "Teacher: " + activeTeacher + "\n" +
+      "Full Name: " + name + "\n" +
+      "Email Address: " + email + "\n" +
+      "WhatsApp Number: " + phone + "\n" +
+      "Yoga Goal: " + goal + "\n" +
+      "Preferred Class Timing: " + timing + "\n\n" +
+      "Please let me know the next steps. Thank you!";
+
+    if (!isValidWhatsApp(activeWhatsApp)) {
+      alert(
+        "The WhatsApp number for " + activeTeacher +
+        " has not been set yet. Please contact Ashtangaa Yoga directly."
+      );
+      return;
+    }
+
+    closeDemoModal();
+    openWhatsApp(activeWhatsApp, message);
+  });
 </script>
 
 </body>
 </html>
+
