@@ -193,44 +193,238 @@
       .hero { padding: 52px 0; }
       .cta { padding: 30px 20px; }
     }
+    
+/* Ashtangaa Yoga shared navigation */
+.ay-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,.97);
+  border-bottom: 1px solid #e1e9df;
+  box-shadow: 0 4px 18px rgba(23,77,49,.05);
+}
+.ay-nav-wrap {
+  width: min(1400px, 94%);
+  min-height: 82px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+}
+.ay-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  flex-shrink: 0;
+}
+.ay-brand img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+.ay-brand-name strong {
+  display: block;
+  color: #174d31;
+  font-size: 18px;
+  line-height: 1.4;
+}
+.ay-brand-name small {
+  display: block;
+  color: #66756b;
+  font-size: 12px;
+}
+.ay-menu {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+.ay-link {
+  color: #174d31;
+  font-size: 13px;
+  font-weight: 700;
+}
+.ay-link:hover { color: #176b42; }
+.ay-nav-group { position: relative; }
+.ay-nav-heading {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.ay-dropdown-toggle {
+  border: 0;
+  background: transparent;
+  color: #176b42;
+  font-size: 19px;
+  cursor: pointer;
+  padding: 3px 5px;
+}
+.ay-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 18px);
+  left: -15px;
+  width: 285px;
+  padding: 9px;
+  background: #fff;
+  border: 1px solid #e1e9df;
+  border-radius: 14px;
+  box-shadow: 0 14px 35px rgba(23,77,49,.13);
+}
+.ay-dropdown-personal { width: 310px; }
+.ay-nav-group:hover > .ay-dropdown,
+.ay-nav-group:focus-within > .ay-dropdown,
+.ay-nav-group.ay-open > .ay-dropdown {
+  display: block;
+}
+.ay-dropdown a {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  padding: 11px;
+  border-radius: 9px;
+}
+.ay-dropdown a:hover { background: #f1f7ef; }
+.ay-dropdown a > span:first-child { font-size: 20px; }
+.ay-dropdown strong {
+  display: block;
+  color: #174d31;
+  font-size: 13px;
+}
+.ay-dropdown small {
+  display: block;
+  margin-top: 3px;
+  color: #66756b;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.ay-book-btn {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 11px 15px;
+  background: #176b42;
+  color: #fff;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.ay-book-btn:hover { background: #174d31; }
+
+.ay-menu-toggle {
+  display: none;
+  width: 43px;
+  height: 41px;
+  border: 1px solid #e1e9df;
+  border-radius: 9px;
+  background: #f4f8f3;
+  cursor: pointer;
+  padding: 9px;
+}
+.ay-menu-toggle span {
+  display: block;
+  height: 2px;
+  margin: 4px 0;
+  background: #174d31;
+  border-radius: 2px;
+}
+
+@media (max-width: 1100px) {
+  .ay-nav-wrap {
+    width: 92%;
+    min-height: 72px;
+    flex-wrap: wrap;
+    padding: 10px 0;
+  }
+  .ay-brand img { width: 45px; height: 45px; }
+  .ay-brand-name strong { font-size: 16px; }
+  .ay-menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+  .ay-menu {
+    display: none;
+    width: 100%;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0;
+    padding: 5px 0 12px;
+  }
+  .ay-menu.ay-menu-open { display: flex; }
+  .ay-link { display: block; padding: 11px 4px; }
+  .ay-nav-heading { justify-content: space-between; }
+  .ay-nav-heading .ay-link { flex: 1; }
+  .ay-dropdown,
+  .ay-dropdown-personal {
+    position: static;
+    width: 100%;
+    margin: 0 0 8px;
+    box-shadow: none;
+    background: #f7faf6;
+  }
+  .ay-book-btn { text-align: center; margin-top: 10px; }
+}
   </style>
 </head>
 
 <body>
-  <header>
-    <div class="container nav">
-      <a class="brand" href="index.html" aria-label="Ashtangaa Yoga Home">
-        <div class="brand-mark">
-          <img src="img/ashtangaa-logo.jpeg" alt="Ashtangaa Yoga Logo">
-        </div>
-        <div class="brand-text">
-          <strong>Ashtangaa Yoga</strong>
-          <span>with Mukesh</span>
-        </div>
-      </a>
+  
+<header class="ay-header">
+  <div class="ay-nav-wrap">
 
-      <button class="mobile-btn" id="mobileBtn" aria-label="Open menu"
-        aria-expanded="false">☰</button>
+    <a class="ay-brand" href="index.html" aria-label="Ashtangaa Yoga Home">
+      <img src="img/ashtangaa-logo.jpeg" alt="Ashtangaa Yoga Logo">
+      <span class="ay-brand-name">
+        <strong>Ashtangaa Yoga</strong>
+        <small>with Mukesh</small>
+      </span>
+    </a>
 
-      <nav class="menu" id="menu">
-        <a href="index.html">Home</a>
-        <a href="about-mukesh.html">About Mukesh</a>
-        <a href="online-yoga-classes.html">Online Yoga Classes</a>
-        <a href="personal-yoga.html">Personal Yoga</a>
-        <a href="one-to-one-yoga.html">One-to-One Sessions</a>
-        <a href="personalized-yoga.html">Personalized Guidance</a>
-        <a href="programs.html">Yoga Programs</a>
-        <a href="yoga-for-beginners.html">Beginners</a>
-        <a href="weight-loss-yoga.html">Weight Loss Yoga</a>
-        <a href="pranayama-meditation.html">Pranayama &amp; Meditation</a>
-        <a href="pregnancy-postpartum-yoga.html">Pregnancy &amp; Postpartum</a>
-        <a href="trainer.html">Trainer</a>
-        <a href="events.html">Events</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact / Book a Class</a>
-      </nav>
-    </div>
-  </header>
+    <button class="ay-menu-toggle" id="ayMenuToggle"
+      type="button" aria-label="Open navigation menu"
+      aria-expanded="false" aria-controls="ayMainMenu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="ay-menu" id="ayMainMenu" aria-label="Main navigation">
+      <a class="ay-link" href="index.html">Home</a>
+      <a class="ay-link" href="about-mukesh.html">About Mukesh</a>
+
+      <div class="ay-nav-group">
+        <div class="ay-nav-heading">
+          <a class="ay-link" href="online-yoga-classes.html">Online Yoga Classes</a>
+          <button class="ay-dropdown-toggle" type="button"
+            aria-label="Show online yoga class links" aria-expanded="false">⌄</button>
+        </div>
+        <div class="ay-dropdown">
+          <a href="online-yoga-classes.html"><span>🧘</span><span><strong>Yoga Classes</strong><small>Explore class options</small></span></a>
+          <a href="programs.html"><span>🌿</span><span><strong>Yoga Programs</strong><small>Structured practice plans</small></span></a>
+          <a href="yoga-for-beginners.html"><span>🌱</span><span><strong>Yoga for Beginners</strong><small>Start your yoga journey</small></span></a>
+          <a href="weight-loss-yoga.html"><span>⚖️</span><span><strong>Weight Loss Yoga</strong><small>Movement and mindful habits</small></span></a>
+        </div>
+      </div>
+
+      <div class="ay-nav-group">
+        <div class="ay-nav-heading">
+          <a class="ay-link" href="personal-yoga.html">Personal Yoga</a>
+          <button class="ay-dropdown-toggle" type="button"
+            aria-label="Show personal yoga services" aria-expanded="false">⌄</button>
+        </div>
+        <div class="ay-dropdown ay-dropdown-personal">
+          <a href="one-to-one-yoga.html"><span>👤</span><span><strong>One-to-One Sessions</strong><small>Individual online guidance</small></span></a>
+          <a href="personalized-yoga.html"><span>🎯</span><span><strong>Personalized Guidance</strong><small>Practice shaped around your goals</small></span></a>
+          <a href="pranayama-meditation.html"><span>🌬️</span><span><strong>Pranayama &amp; Meditation</strong><small>Breathing and mindful practice</small></span></a>
+          <a href="pregnancy-postpartum-yoga.html"><span>🤍</span><span><strong>Pregnancy &amp; Postpartum</strong><small>Guidance for different stages</small></span></a>
+        </div>
+      </div>
+
+      <a class="ay-link" href="trainer.html">Trainer</a>
+      <a class="ay-link" href="events.html">Events</a>
+      <a class="ay-link" href="blog.html">Blog</a>
+      <a class="ay-book-btn" href="contact.html">Book a Class ↗</a>
+    </nav>
+  </div>
+</header>
 
   <main>
     <section class="hero">
@@ -382,15 +576,70 @@
     </div>
   </footer>
 
-  <script>
-    const mobileBtn = document.getElementById("mobileBtn");
-    const menu = document.getElementById("menu");
+  
+<script>
+(function () {
+  const menu = document.getElementById("ayMainMenu");
+  const menuButton = document.getElementById("ayMenuToggle");
+  const groups = document.querySelectorAll(".ay-nav-group");
 
-    mobileBtn.addEventListener("click", function () {
-      const isOpen = menu.classList.toggle("open");
-      mobileBtn.setAttribute("aria-expanded", isOpen);
-      mobileBtn.textContent = isOpen ? "✕" : "☰";
+  if (!menu || !menuButton) return;
+
+  function closeDropdowns(exceptGroup) {
+    groups.forEach(function (group) {
+      if (group !== exceptGroup) {
+        group.classList.remove("ay-open");
+        const button = group.querySelector(".ay-dropdown-toggle");
+        if (button) button.setAttribute("aria-expanded", "false");
+      }
     });
-  </script>
+  }
+
+  menuButton.addEventListener("click", function () {
+    const isOpen = menu.classList.toggle("ay-menu-open");
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+    menuButton.setAttribute("aria-label",
+      isOpen ? "Close navigation menu" : "Open navigation menu");
+    if (!isOpen) closeDropdowns();
+  });
+
+  groups.forEach(function (group) {
+    const button = group.querySelector(".ay-dropdown-toggle");
+    if (!button) return;
+
+    button.addEventListener("click", function (event) {
+      event.preventDefault();
+      const willOpen = !group.classList.contains("ay-open");
+      closeDropdowns(group);
+      group.classList.toggle("ay-open", willOpen);
+      button.setAttribute("aria-expanded", String(willOpen));
+    });
+  });
+
+  menu.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+      if (window.innerWidth <= 1100) {
+        menu.classList.remove("ay-menu-open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Open navigation menu");
+        closeDropdowns();
+      }
+    });
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closeDropdowns();
+      menu.classList.remove("ay-menu-open");
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.setAttribute("aria-label", "Open navigation menu");
+    }
+  });
+
+  document.addEventListener("click", function (event) {
+    if (!event.target.closest(".ay-header")) closeDropdowns();
+  });
+})();
+</script>
 </body>
 </html>
