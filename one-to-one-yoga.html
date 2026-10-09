@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#176b42">
+  <meta name="description" content="Practice yoga online with Mukesh through one-to-one sessions tailored to your experience, goals and routine.">
+  <title>One-to-One Yoga Sessions | Ashtangaa Yoga</title>
+
+  <style>
+    :root {
+      --green: #176b42;
+      --dark: #174d31;
+      --light: #f4f8f3;
+      --pale: #e8f2e7;
+      --text: #34443a;
+      --muted: #66756b;
+      --white: #ffffff;
+      --border: #e1e9df;
+      --shadow: 0 10px 30px rgba(23, 77, 49, .08);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, 92%); margin: auto; }
+
+    header {
+      background: rgba(255,255,255,.97);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      flex-shrink: 0;
+    }
+    .brand-mark img {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+    .brand-text strong {
+      display: block;
+      color: var(--dark);
+      font-size: 19px;
+    }
+    .brand-text span { color: var(--muted); font-size: 13px; }
+    .menu {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .menu a {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--dark);
+    }
+    .menu a:hover { color: var(--green); }
+    .mobile-btn {
+      display: none;
+      border: 1px solid var(--border);
+      background: var(--light);
+      border-radius: 9px;
+      padding: 8px 12px;
+      font-size: 22px;
+      color: var(--dark);
+      cursor: pointer;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--light), #fff 70%);
+      padding: 76px 0;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 42px;
+      align-items: center;
+    }
+    .eyebrow {
+      color: var(--green);
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    h1, h2, h3 { color: var(--dark); line-height: 1.25; }
+    h1 { font-size: clamp(34px, 5vw, 54px); margin: 14px 0; }
+    h2 { font-size: clamp(27px, 3vw, 36px); margin: 0 0 14px; }
+    h3 { font-size: 20px; margin: 0 0 9px; }
+    p { margin: 0 0 16px; }
+    .lead { font-size: 18px; color: var(--muted); max-width: 650px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
+    .btn {
+      display: inline-block;
+      padding: 13px 21px;
+      border-radius: 9px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: .2s;
+    }
+    .btn-primary { background: var(--green); color: white; }
+    .btn-primary:hover { background: var(--dark); transform: translateY(-1px); }
+    .btn-secondary { color: var(--dark); border: 1px solid #b8cfba; background: white; }
+    .hero-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+    .hero-icon {
+      width: 60px; height: 60px; border-radius: 16px;
+      display: grid; place-items: center;
+      background: var(--pale); font-size: 30px; margin-bottom: 18px;
+    }
+    .hero-card ul { padding-left: 20px; margin-bottom: 0; }
+    .hero-card li { margin: 8px 0; }
+
+    section { padding: 70px 0; }
+    .section-heading { max-width: 720px; margin: 0 auto 34px; text-align: center; }
+    .section-heading p { color: var(--muted); }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: var(--shadow);
+    }
+    .card-icon { font-size: 27px; margin-bottom: 13px; }
+    .soft-section { background: var(--light); }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .step-number {
+      width: 38px; height: 38px; display: grid; place-items: center;
+      background: var(--pale); color: var(--green);
+      border-radius: 50%; font-weight: 700; margin-bottom: 16px;
+    }
+    .cta {
+      background: var(--dark);
+      color: white;
+      border-radius: 22px;
+      padding: 42px;
+      text-align: center;
+    }
+    .cta h2 { color: white; }
+    .cta p { color: #e2eee4; max-width: 680px; margin: 0 auto 22px; }
+    .cta .btn-secondary { border: 0; }
+    footer { background: #f5f8f4; border-top: 1px solid var(--border); padding: 35px 0; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 28px; }
+    footer h3 { font-size: 17px; }
+    footer p, footer a { font-size: 14px; color: var(--muted); }
+    footer a { display: block; margin: 7px 0; }
+    .copyright {
+      border-top: 1px solid var(--border); margin-top: 25px;
+      padding-top: 18px; color: var(--muted); font-size: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .mobile-btn { display: block; }
+      .nav { flex-wrap: wrap; padding: 12px 0; }
+      .menu {
+        display: none; width: 100%; align-items: stretch;
+        flex-direction: column; gap: 0; padding: 5px 0 12px;
+      }
+      .menu.open { display: flex; }
+      .menu a { padding: 10px 4px; border-bottom: 1px solid var(--border); font-size: 14px; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .grid-3, .steps { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      section { padding: 52px 0; }
+      .hero { padding: 52px 0; }
+      .cta { padding: 30px 20px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Ashtangaa Yoga Home">
+        <div class="brand-mark">
+          <img src="img/ashtangaa-logo.jpeg" alt="Ashtangaa Yoga Logo">
+        </div>
+        <div class="brand-text">
+          <strong>Ashtangaa Yoga</strong>
+          <span>with Mukesh</span>
+        </div>
+      </a>
+
+      <button class="mobile-btn" id="mobileBtn" aria-label="Open menu"
+        aria-expanded="false">☰</button>
+
+      <nav class="menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="about-mukesh.html">About Mukesh</a>
+        <a href="online-yoga-classes.html">Online Yoga Classes</a>
+        <a href="personal-yoga.html">Personal Yoga</a>
+        <a href="one-to-one-yoga.html">One-to-One Sessions</a>
+        <a href="personalized-yoga.html">Personalized Guidance</a>
+        <a href="programs.html">Yoga Programs</a>
+        <a href="yoga-for-beginners.html">Beginners</a>
+        <a href="weight-loss-yoga.html">Weight Loss Yoga</a>
+        <a href="pranayama-meditation.html">Pranayama &amp; Meditation</a>
+        <a href="pregnancy-postpartum-yoga.html">Pregnancy &amp; Postpartum</a>
+        <a href="trainer.html">Trainer</a>
+        <a href="events.html">Events</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact / Book a Class</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Personal Yoga • Online Worldwide</span>
+          <h1>One-to-One Yoga Sessions With Mukesh</h1>
+          <p class="lead">
+            A more personal way to practice yoga, with individual attention
+            and guidance shaped around your experience, goals and daily routine.
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" href="contact.html">Enquire About Sessions</a>
+            <a class="btn btn-secondary" href="#how-it-works">How It Works</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-icon">🧘</div>
+          <h3>Your Practice, Your Pace</h3>
+          <p>Online one-to-one guidance for people who prefer a more focused and personal yoga experience.</p>
+          <ul>
+            <li>Individual attention during practice</li>
+            <li>Guidance suited to your experience level</li>
+            <li>Options to discuss your goals and schedule</li>
+            <li>Practice from the comfort of home</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Why Choose One-to-One?</span>
+          <h2>Yoga Guidance That Focuses on You</h2>
+          <p>Personal sessions give you an opportunity to discuss your needs and learn with closer attention than a general group class.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="card-icon">🎯</div>
+            <h3>Goal-Focused Practice</h3>
+            <p>Discuss priorities such as building a consistent routine, improving mobility, developing strength or learning foundational yoga.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🌿</div>
+            <h3>Suitable Progression</h3>
+            <p>Work progressively according to your experience, comfort and current ability instead of trying to keep up with a group.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🌍</div>
+            <h3>Online Convenience</h3>
+            <p>Join from home. Session timing can be discussed according to availability and your time zone.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft-section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Your Session</span>
+          <h2>What Can We Work On?</h2>
+          <p>The content of your sessions can be discussed and adapted to your level and goals.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="card-icon">🧘‍♂️</div>
+            <h3>Yoga Asana</h3>
+            <p>Learn postures, alignment basics, warm-ups and gradual movement progressions.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🌬️</div>
+            <h3>Pranayama</h3>
+            <p>Explore appropriate breathing practices with clear instruction and attention to comfort.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🕉️</div>
+            <h3>Meditation</h3>
+            <p>Build a steady practice of attention, relaxation and mindful awareness.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Getting Started</span>
+          <h2>Three Simple Steps</h2>
+          <p>Start with a conversation so the right type of guidance can be discussed.</p>
+        </div>
+
+        <div class="steps">
+          <article class="card">
+            <div class="step-number">1</div>
+            <h3>Share Your Goals</h3>
+            <p>Tell us about your experience, interests, availability and what you hope to work on.</p>
+          </article>
+          <article class="card">
+            <div class="step-number">2</div>
+            <h3>Discuss Your Sessions</h3>
+            <p>Talk about suitable session options, timing and the type of practice you need.</p>
+          </article>
+          <article class="card">
+            <div class="step-number">3</div>
+            <h3>Begin Your Practice</h3>
+            <p>Join online and build consistency with guided practice and gradual progression.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft-section">
+      <div class="container">
+        <div class="cta">
+          <h2>Ready to Discuss Your Personal Yoga Sessions?</h2>
+          <p>Contact Ashtangaa Yoga to share your goals and ask about available online session options.</p>
+          <a class="btn btn-secondary" href="contact.html">Contact / Book a Class</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Ashtangaa Yoga</h3>
+          <p>Traditional Yoga, Pranayama and Meditation with Mukesh. Online guidance for students in India and worldwide.</p>
+        </div>
+        <div>
+          <h3>Yoga</h3>
+          <a href="online-yoga-classes.html">Online Yoga Classes</a>
+          <a href="personal-yoga.html">Personal Yoga</a>
+          <a href="yoga-for-beginners.html">Yoga for Beginners</a>
+          <a href="weight-loss-yoga.html">Weight Loss Yoga</a>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <a href="about-mukesh.html">About Mukesh</a>
+          <a href="pranayama-meditation.html">Pranayama &amp; Meditation</a>
+          <a href="contact.html">Contact / Book a Class</a>
+        </div>
+      </div>
+      <div class="copyright">© 2026 Ashtangaa Yoga with Mukesh. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileBtn = document.getElementById("mobileBtn");
+    const menu = document.getElementById("menu");
+
+    mobileBtn.addEventListener("click", function () {
+      const isOpen = menu.classList.toggle("open");
+      mobileBtn.setAttribute("aria-expanded", isOpen);
+      mobileBtn.textContent = isOpen ? "✕" : "☰";
+    });
+  </script>
+</body>
+</html>
