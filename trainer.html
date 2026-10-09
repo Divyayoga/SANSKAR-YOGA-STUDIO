@@ -1,480 +1,611 @@
+
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 <head>
-<title>Ahana | Yoga HTML Template</title>
-<meta charset="UTF-8">
-<meta name="description" content="Ahana Yoga HTML Template">
-<meta name="keywords" content="yoga, html">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="css/bootstrap.min.css" />
-<link rel="stylesheet" href="css/font-awesome.min.css" />
-<link rel="stylesheet" href="css/owl.carousel.min.css" />
-<link rel="stylesheet" href="css/nice-select.css" />
-<link rel="stylesheet" href="css/slicknav.min.css" />
+  <title>Our Yoga Teachers | Ashtangaa Yoga with Mukesh</title>
+  <meta name="description" content="Meet the yoga teachers at Ashtangaa Yoga. Learn yoga, pranayama, meditation and traditional yogic practices with Mukesh Kumawat.">
+  <meta name="theme-color" content="#123d2b">
 
-<link rel="stylesheet" href="css/style.css" />
-<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green: #123d2b;
+      --green-light: #1d573d;
+      --gold: #d4af37;
+      --cream: #f7f5ee;
+      --white: #ffffff;
+      --text: #25352b;
+      --muted: #66746a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-header {
+      background: var(--green);
+      color: white;
+      border-bottom: 2px solid var(--gold);
+    }
+
+    .nav-wrap {
+      max-width: 1180px;
+      margin: auto;
+      padding: 15px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 48px;
+      height: 48px;
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: var(--green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .brand-mark img {
+      width: 130%;
+      height: 130%;
+      object-fit: cover;
+    }
+
+    .brand-name {
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .brand-subtitle {
+      color: #e4d7a7;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 22px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: #f0d978;
+    }
+
+    .nav-cta {
+      background: var(--gold);
+      color: #183322 !important;
+      padding: 10px 16px;
+      border-radius: 6px;
+    }
+
+    .hero {
+      background:
+        radial-gradient(ellipse at top right, #286443 0%, transparent 48%),
+        linear-gradient(135deg, #0b2b1d, #174a32);
+      color: white;
+      text-align: center;
+      padding: 76px 22px 82px;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(34px, 5vw, 54px);
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      max-width: 690px;
+      margin: auto;
+      color: #e4eee6;
+      font-size: 16px;
+    }
+
+    .gold-line {
+      width: 70px;
+      height: 3px;
+      background: var(--gold);
+      margin: 24px auto;
+    }
+
+    .section {
+      max-width: 1180px;
+      margin: auto;
+      padding: 65px 22px;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 38px;
+    }
+
+    .section-heading h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(28px, 4vw, 38px);
+      color: var(--green);
+      line-height: 1.25;
+      margin-bottom: 13px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    .teacher-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 26px;
+    }
+
+    .teacher-card {
+      background: var(--white);
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid #e5e6dc;
+      box-shadow: 0 8px 28px rgba(18, 61, 43, 0.06);
+    }
+
+    .teacher-photo {
+      min-height: 310px;
+      background: #e6ebdf;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .teacher-photo img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .photo-placeholder {
+      width: 100%;
+      min-height: 310px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 25px;
+      background: linear-gradient(145deg, #e4ebdf, #f6f2e5);
+      color: var(--green);
+    }
+
+    .initials {
+      width: 92px;
+      height: 92px;
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      background: var(--green);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-family: "Playfair Display", serif;
+      font-size: 31px;
+      margin-bottom: 15px;
+    }
+
+    .teacher-info {
+      padding: 26px;
+    }
+
+    .teacher-info h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 25px;
+      color: var(--green);
+      margin-bottom: 4px;
+    }
+
+    .role {
+      color: #8a6d16;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .teacher-info p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .qualification {
+      padding-top: 13px;
+      margin-top: 14px;
+      border-top: 1px solid #e8e9e1;
+      font-size: 13px;
+    }
+
+    .demo-note {
+      display: inline-block;
+      background: #f6edcf;
+      color: #715810;
+      padding: 5px 9px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .profile-button {
+      display: inline-block;
+      margin-top: 8px;
+      background: var(--green);
+      color: white;
+      padding: 11px 17px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .profile-button:hover {
+      background: var(--green-light);
+    }
+
+    .mission {
+      background: #e9eee5;
+      border-top: 1px solid #dce5d8;
+      border-bottom: 1px solid #dce5d8;
+    }
+
+    .mission-inner {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      padding: 58px 22px;
+    }
+
+    .mission h2 {
+      font-family: "Playfair Display", serif;
+      color: var(--green);
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+
+    .mission p {
+      color: var(--muted);
+    }
+
+    .contact-cta {
+      text-align: center;
+      padding: 55px 22px 65px;
+    }
+
+    .contact-cta h2 {
+      font-family: "Playfair Display", serif;
+      color: var(--green);
+      font-size: 31px;
+      margin-bottom: 12px;
+    }
+
+    .contact-cta p {
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    .site-footer {
+      background: #0b291c;
+      color: #e4eee6;
+      padding: 32px 22px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .footer-brand {
+      font-family: "Playfair Display", serif;
+      color: #f0d978;
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin: 17px 0;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
+    @media (max-width: 760px) {
+      .nav-wrap {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        gap: 13px 17px;
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 58px 20px 65px;
+      }
+
+      .section {
+        padding: 48px 16px;
+      }
+
+      .teacher-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .teacher-photo,
+      .photo-placeholder {
+        min-height: 260px;
+      }
+
+      .teacher-photo img {
+        height: 320px;
+      }
+
+      .teacher-info {
+        padding: 22px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<div id="preloder">
-<div class="loader"></div>
-</div>
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html" aria-label="Ashtangaa Yoga Home">
+      <span class="brand-mark">
+        <img src="img/ashtangaa-logo.jpeg" alt="Ashtangaa Yoga logo">
+      </span>
+      <span>
+        <span class="brand-name">Ashtangaa Yoga</span>
+        <span class="brand-subtitle">With Mukesh</span>
+      </span>
+    </a>
 
-<header class="header-section">
-<div class="header-top">
-<div class="row m-0">
-<div class="col-md-6 d-none d-md-block p-0">
-<div class="header-info">
-<i class="material-icons">map</i>
-<p>184 Main Collins Street</p>
-</div>
-<div class="header-info">
-<i class="material-icons">phone</i>
-<p>(965) 436 3274</p>
-</div>
-</div>
-<div class="col-md-6 text-left text-md-right p-0">
-<div class="header-info d-none d-md-inline-flex">
-<i class="material-icons">alarm_on</i>
-<p>Mon - Fri: 6:30am - 07:45pm</p>
-</div>
-<div class="header-info">
-<i class="material-icons">language</i>
-<select id="language" class="language-select">
-<option data-display="Language">EN</option>
-<option data-display="Language" value="1">ES</option>
-<option data-display="Language" value="2">JA</option>
-<option data-display="Language" value="2">AR</option>
-</select>
-</div>
-</div>
-</div>
-</div>
-<div class="header-bottom">
-<a href="index.html" class="site-logo">
-<img src="img/logo.png" alt>
-</a>
-<div class="hb-right">
-<div class="hb-switch" id="search-switch">
-<img src="img/icons/search.png" alt>
-</div>
-<div class="hb-switch" id="infor-switch">
-<img src="img/icons/bars.png" alt>
-</div>
-</div>
-<div class="container">
-<ul class="main-menu">
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="classes.html">Classes</a>
-<ul class="sub-menu">
-<li><a href="classes.html">Our Claasses</a></li>
-<li><a href="classes-details.html">Claasses Details</a></li>
-</ul>
-</li>
-<li><a href="trainer.html" class="active">trainers</a>
-<ul class="sub-menu">
-<li><a href="trainer.html">Our Trainers</a></li>
-<li><a href="trainer-details.html">Trainers Details</a></li>
-</ul>
-</li>
-<li><a href="events.html">events</a>
-<ul class="sub-menu">
-<li><a href="events.html">Our Events</a></li>
-<li><a href="event-details.html">Events Details</a></li>
-</ul>
-</li>
-<li><a href="blog.html">Blog</a>
-<ul class="sub-menu">
-<li><a href="blog.html">Our Blog</a></li>
-<li><a href="single-blog.html">Blog Details</a></li>
-</ul>
-</li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-</div>
-</div>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="programs.html">Programs</a>
+      <a href="about-mukesh.html">About Mukesh</a>
+      <a href="blog.html">Blog</a>
+      <a href="events.html">Events</a>
+      <a class="nav-cta" href="contact.html">Book a Class</a>
+    </nav>
+  </div>
 </header>
 
+<main>
+  <section class="hero">
+    <div class="eyebrow">Ashtangaa Yoga · Traditional Wisdom</div>
+    <h1>Meet Your Yoga Teachers</h1>
+    <div class="gold-line"></div>
+    <p>
+      Discover yoga, pranayama and meditation with a focus on mindful
+      practice, traditional yogic wisdom and a balanced way of life.
+    </p>
+  </section>
 
-<div class="infor-model-warp">
-<div class="infor-model d-flex align-items-center">
-<div class="infor-close">
-<i class="material-icons">close</i>
-</div>
-<div class="infor-middle">
-<a href="trainer.html#" class="infor-logo">
-<img src="img/logo-2.png" alt>
-</a>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-<div class="insta-imgs">
-<div class="insta-item">
-<div class="insta-img">
-<img src="img/infor/1.jpg" alt>
-<div class="insta-hover">
-<i class="fa fa-instagram"></i>
-<p>ahana.yoga</p>
-</div>
-</div>
-</div>
-<div class="insta-item">
-<div class="insta-img">
-<img src="img/infor/2.jpg" alt>
-<div class="insta-hover">
-<i class="fa fa-instagram"></i>
-<p>ahana.yoga</p>
-</div>
-</div>
-</div>
-<div class="insta-item">
-<div class="insta-img">
-<img src="img/infor/3.jpg" alt>
-<div class="insta-hover">
-<i class="fa fa-instagram"></i>
-<p>ahana.yoga</p>
-</div>
-</div>
-</div>
-<div class="insta-item">
-<div class="insta-img">
-<img src="img/infor/4.jpg" alt>
-<div class="insta-hover">
-<i class="fa fa-instagram"></i>
-<p>ahana.yoga</p>
-</div>
-</div>
-</div>
-<div class="insta-item">
-<div class="insta-img">
-<img src="img/infor/5.jpg" alt>
-<div class="insta-hover">
-<i class="fa fa-instagram"></i>
-<p>ahana.yoga</p>
-</div>
-</div>
-</div>
-<div class="insta-item">
-<div class="insta-img">
-<img src="img/infor/6.jpg" alt>
-<div class="insta-hover">
-<i class="fa fa-instagram"></i>
-<p>ahana.yoga</p>
-</div>
-</div>
-</div>
-</div>
-<form class="infor-form">
-<input type="text" placeholder="Your Email">
-<button><img src="img/icons/send.png" alt></button>
-</form>
-<div class="insta-social">
-<a href="trainer.html#"><i class="fa fa-linkedin"></i></a>
-<a href="trainer.html#"><i class="fa fa-twitter"></i></a>
-<a href="trainer.html#"><i class="fa fa-instagram"></i></a>
-<a href="trainer.html#"><i class="fa fa-facebook"></i></a>
-</div>
-</div>
-</div>
-</div>
+  <section class="section">
+    <div class="section-heading">
+      <div class="eyebrow">Our Teaching Team</div>
+      <h2>Learn, Practise and Grow</h2>
+      <p>
+        Meet our lead teacher and explore the teaching team.
+        Additional instructor profiles on this page are temporary
+        placeholders and will be updated when the team is confirmed.
+      </p>
+    </div>
 
+    <div class="teacher-grid">
 
-<section class="page-top-section set-bg" data-setbg="img/page-top-bg.jpg">
-<div class="container">
-<div class="row">
-<div class="col-lg-7 m-auto text-white">
-<h2>Our Trainers</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-</div>
-</div>
-</div>
-</section>
+      <!-- MUKESH PROFILE
+           IMPORTANT: Replace img/mukesh.jpg below with the exact path
+           of your existing photograph in the GitHub repository. -->
 
+      <article class="teacher-card">
+        <div class="teacher-photo">
+          <img
+            src="img/mukesh.jpg"
+            alt="Mukesh Kumawat, Founder and Lead Yoga Teacher"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+          >
+          <div class="photo-placeholder" style="display:none;">
+            <div class="initials">MK</div>
+            <strong>Mukesh Kumawat</strong>
+            <span>Replace the image path with your real photo</span>
+          </div>
+        </div>
 
-<section class="trainers-page-section spad overflow-hidden">
-<div class="container">
-<div class="row">
-<div class="col-lg-6">
-<div class="trainer-item">
-<div class="ti-img">
-<img src="img/trainer/1.png" alt>
-</div>
-<div class="ti-text">
-<h4>Lori Kennedy</h4>
-<h6>Yoga Trainer</h6>
-<p>Yoga & Therapy Certificate of Uttarakhand University Sanskrit</p>
-<div class="ti-social">
-<a href="trainer.html#"><i class="fa fa-facebook"></i></a>
-<a href="trainer.html#"><i class="fa fa-instagram"></i></a>
-<a href="trainer.html#"><i class="fa fa-twitter"></i></a>
-<a href="trainer.html#"><i class="fa fa-linkedin"></i></a>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-6">
-<div class="trainer-item">
-<div class="ti-img">
-<img src="img/trainer/2.png" alt>
-</div>
-<div class="ti-text">
-<h4>Lori Kennedy</h4>
-<h6>Yoga Trainer</h6>
-<p>Yoga & Therapy Certificate of Uttarakhand University Sanskrit</p>
-<div class="ti-social">
-<a href="trainer.html#"><i class="fa fa-facebook"></i></a>
-<a href="trainer.html#"><i class="fa fa-instagram"></i></a>
-<a href="trainer.html#"><i class="fa fa-twitter"></i></a>
-<a href="trainer.html#"><i class="fa fa-linkedin"></i></a>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-6">
-<div class="ts-item">
-<div class="trainer-item">
-<div class="ti-img">
-<img src="img/trainer/3.png" alt>
-</div>
-<div class="ti-text">
-<h4>Rebecca James</h4>
-<h6>Yoga Trainer</h6>
-<p>Yoga & Therapy Certificate of Uttarakhand University Sanskrit</p>
-<div class="ti-social">
-<a href="trainer.html#"><i class="fa fa-facebook"></i></a>
-<a href="trainer.html#"><i class="fa fa-instagram"></i></a>
-<a href="trainer.html#"><i class="fa fa-twitter"></i></a>
-<a href="trainer.html#"><i class="fa fa-linkedin"></i></a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-6">
-<div class="ts-item">
-<div class="trainer-item">
-<div class="ti-img">
-<img src="img/trainer/4.png" alt>
-</div>
-<div class="ti-text">
-<h4>Cynthia McCoy</h4>
-<h6>Yoga Trainer</h6>
-<p>Yoga & Therapy Certificate of Uttarakhand University Sanskrit</p>
-<div class="ti-social">
-<a href="trainer.html#"><i class="fa fa-facebook"></i></a>
-<a href="trainer.html#"><i class="fa fa-instagram"></i></a>
-<a href="trainer.html#"><i class="fa fa-twitter"></i></a>
-<a href="trainer.html#"><i class="fa fa-linkedin"></i></a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-6">
-<div class="ts-item">
-<div class="trainer-item">
-<div class="ti-img">
-<img src="img/trainer/5.png" alt>
-</div>
-<div class="ti-text">
-<h4>Olivia Richards</h4>
-<h6>Yoga Trainer</h6>
-<p>Yoga & Therapy Certificate of Uttarakhand University Sanskrit</p>
-<div class="ti-social">
-<a href="trainer.html#"><i class="fa fa-facebook"></i></a>
-<a href="trainer.html#"><i class="fa fa-instagram"></i></a>
-<a href="trainer.html#"><i class="fa fa-twitter"></i></a>
-<a href="trainer.html#"><i class="fa fa-linkedin"></i></a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-6">
-<div class="ts-item">
-<div class="trainer-item">
-<div class="ti-img">
-<img src="img/trainer/6.png" alt>
-</div>
-<div class="ti-text">
-<h4>Emily Walker</h4>
-<h6>Yoga Trainer</h6>
-<p>Yoga & Therapy Certificate of Uttarakhand University Sanskrit</p>
-<div class="ti-social">
-<a href="trainer.html#"><i class="fa fa-facebook"></i></a>
-<a href="trainer.html#"><i class="fa fa-instagram"></i></a>
-<a href="trainer.html#"><i class="fa fa-twitter"></i></a>
-<a href="trainer.html#"><i class="fa fa-linkedin"></i></a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="site-pagination">
-<a href="trainer.html#" class="active">1</a>
-<a href="trainer.html#">2</a>
-<a href="trainer.html#"><i class="material-icons">keyboard_arrow_right</i></a>
-</div>
-</div>
-</section>
+        <div class="teacher-info">
+          <h3>Mukesh Kumawat</h3>
+          <div class="role">Founder &amp; Lead Yoga Teacher</div>
+          <p>
+            Mukesh shares yoga and traditional yogic practices through
+            Ashtangaa Yoga, helping students build a consistent practice
+            rooted in awareness, discipline and balance.
+          </p>
+          <p>
+            His teaching interests include asana practice, pranayama,
+            meditation and the philosophical foundations of yoga.
+          </p>
+          <div class="qualification">
+            <strong>Education:</strong> Postgraduate (M.A.) in
+            Traditional Yoga and Philosophy.
+          </div>
+          <a class="profile-button" href="about-mukesh.html">
+            Read Mukesh's Story
+          </a>
+        </div>
+      </article>
 
+      <!-- TEMPORARY DEMO PROFILE: replace with a real team member later -->
 
-<div class="gallery-section">
-<div class="gallery-slider owl-carousel">
-<div class="gs-item">
-<img src="img/gallery/1.jpg" alt>
-<div class="gs-hover">
-<i class="fa fa-instagram"></i>
-<p>ahana.yoga</p>
-</div>
-</div>
-<div class="gs-item">
-<img src="img/gallery/2.jpg" alt>
-<div class="gs-hover">
-<i class="fa fa-instagram"></i>
-<p>ahana.yoga</p>
-</div>
-</div>
-<div class="gs-item">
-<img src="img/gallery/3.jpg" alt>
-<div class="gs-hover">
-<i class="fa fa-instagram"></i>
-<p>ahana.yoga</p>
-</div>
-</div>
-<div class="gs-item">
-<img src="img/gallery/4.jpg" alt>
-<div class="gs-hover">
-<i class="fa fa-instagram"></i>
-<p>ahana.yoga</p>
-</div>
-</div>
-<div class="gs-item">
-<img src="img/gallery/5.jpg" alt>
-<div class="gs-hover">
-<i class="fa fa-instagram"></i>
-<p>ahana.yoga</p>
-</div>
-</div>
-<div class="gs-item">
-<img src="img/gallery/6.jpg" alt>
-<div class="gs-hover">
-<i class="fa fa-instagram"></i>
-<p>ahana.yoga</p>
-</div>
-</div>
-</div>
-</div>
+      <article class="teacher-card">
+        <div class="photo-placeholder">
+          <div class="initials">AS</div>
+          <strong>Instructor Profile</strong>
+          <span>Photo to be added</span>
+        </div>
+        <div class="teacher-info">
+          <span class="demo-note">TEMPORARY DEMO PROFILE</span>
+          <h3>Ananya Sharma</h3>
+          <div class="role">Yoga Instructor — Placeholder</div>
+          <p>
+            This sample profile is reserved for a future team member
+            who may teach foundational asanas, flexibility and
+            beginner-friendly yoga sessions.
+          </p>
+          <div class="qualification">
+            <strong>Profile status:</strong> Fictional placeholder.
+            Qualifications and experience have not been verified.
+          </div>
+        </div>
+      </article>
 
+      <!-- TEMPORARY DEMO PROFILE: replace with a real team member later -->
 
-<footer class="footer-section">
-<div class="container">
-<div class="row">
-<div class="col-lg-3 col-sm-6">
-<div class="footer-widget">
-<div class="about-widget">
-<img src="img/logo-3.png" alt>
-<p>Lorem ipsum dolor sit amet, consec-tetur adipiscing elit sed.</p>
-<ul>
-<li><i class="material-icons">phone</i>(965) 436 3274</li>
-<li><i class="material-icons">email</i><a href="https://preview.colorlib.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="81e0e9e0efe0aff8eee6e0c1e6ece0e8edafe2eeec">[email&#160;protected]</a></li>
-<li><i class="material-icons">map</i>184 Main Collins Street</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-sm-6">
-<div class="footer-widget pl-0 pl-lg-5">
-<h2 class="fw-title">Company</h2>
-<ul>
-<li><a href="trainer.html#">Online Education</a></li>
-<li><a href="trainer.html#">Gallery</a></li>
-<li><a href="trainer.html#">Special Issues</a></li>
-<li><a href="trainer.html#">Privacy Policy</a></li>
-<li><a href="trainer.html#">Contact Us</a></li>
-</ul>
-</div>
-</div>
-<div class="col-lg-2 col-sm-6">
-<div class="footer-widget">
-<h2 class="fw-title">About Us</h2>
-<ul>
-<li><a href="trainer.html#">Our Vision</a></li>
-<li><a href="trainer.html#">Our Mission</a></li>
-<li><a href="trainer.html#">Meet The Team</a></li>
-<li><a href="trainer.html#">Introduce</a></li>
-<li><a href="trainer.html#">Customer Service</a></li>
-</ul>
-</div>
-</div>
-<div class="col-lg-4 col-sm-6">
-<div class="footer-widget pl-0 pl-lg-5">
-<h2 class="fw-title">Open time</h2>
-<ul>
-<li><i class="material-icons">alarm_on</i>Mon - Fri: 6:30am - 07:45pm</li>
-<li><i class="material-icons">alarm_on</i>Sat - Sun: 8:30am - 05:45pm</li>
-</ul>
-<form class="infor-form">
-<input type="text" placeholder="Your Email">
-<button><img src="img/icons/send.png" alt></button>
-</form>
-</div>
-</div>
-</div>
-<div class="footer-bottom">
-<div class="row">
-<div class="col-md-4">
-<div class="footer-social">
-<a href="trainer.html#"><i class="fa fa-facebook"></i></a>
-<a href="trainer.html#"><i class="fa fa-instagram"></i></a>
-<a href="trainer.html#"><i class="fa fa-twitter"></i></a>
-<a href="trainer.html#"><i class="fa fa-linkedin"></i></a>
-</div>
-</div>
-<div class="col-md-8 text-md-right">
-<div class="copyright">
-Copyright &copy;<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-</div>
-</div>
-</div>
-</div>
-</div>
+      <article class="teacher-card">
+        <div class="photo-placeholder">
+          <div class="initials">AV</div>
+          <strong>Instructor Profile</strong>
+          <span>Photo to be added</span>
+        </div>
+        <div class="teacher-info">
+          <span class="demo-note">TEMPORARY DEMO PROFILE</span>
+          <h3>Arjun Verma</h3>
+          <div class="role">Pranayama &amp; Meditation — Placeholder</div>
+          <p>
+            This sample profile is reserved for a future instructor
+            focused on breathing practices, relaxation and meditation.
+          </p>
+          <div class="qualification">
+            <strong>Profile status:</strong> Fictional placeholder.
+            Qualifications and experience have not been verified.
+          </div>
+        </div>
+      </article>
+
+      <!-- TEMPORARY DEMO PROFILE: replace with a real team member later -->
+
+      <article class="teacher-card">
+        <div class="photo-placeholder">
+          <div class="initials">KM</div>
+          <strong>Instructor Profile</strong>
+          <span>Photo to be added</span>
+        </div>
+        <div class="teacher-info">
+          <span class="demo-note">TEMPORARY DEMO PROFILE</span>
+          <h3>Kavya Mehta</h3>
+          <div class="role">Specialized Yoga — Placeholder</div>
+          <p>
+            This sample profile is reserved for a future instructor
+            whose verified training and teaching focus can be added
+            when the team is finalized.
+          </p>
+          <div class="qualification">
+            <strong>Profile status:</strong> Fictional placeholder.
+            Qualifications and experience have not been verified.
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="mission">
+    <div class="mission-inner">
+      <div class="eyebrow">Our Approach</div>
+      <h2>Yoga Is a Lifelong Practice</h2>
+      <p>
+        At Ashtangaa Yoga, we aim to bring together physical practice,
+        breath awareness, meditation and the study of yogic philosophy.
+        Every student is encouraged to practise mindfully, respect
+        their own limits and progress consistently.
+      </p>
+    </div>
+  </section>
+
+  <section class="contact-cta">
+    <h2>Begin Your Yoga Journey</h2>
+    <p>
+      Explore online yoga classes and find a practice that suits your goals.
+    </p>
+    <a class="profile-button" href="contact.html">Enquire About Classes</a>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-brand">Ashtangaa Yoga</div>
+  <p>Traditional Yoga · Pranayama · Meditation</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about-mukesh.html">About Mukesh</a>
+    <a href="programs.html">Programs</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <p>&copy; <span id="year"></span> Ashtangaa Yoga. All rights reserved.</p>
 </footer>
 
-<div class="back-to-top"><img src="img/icons/up-arrow.png" alt></div>
-
-<div class="search-model set-bg" data-setbg="img/search-bg.jpg">
-<div class="h-100 d-flex align-items-center justify-content-center">
-<div class="search-close-switch"><i class="material-icons">close</i></div>
-<form class="search-moderl-form">
-<input type="text" id="search-input" placeholder="Search">
-<button><img src="img/icons/search-2.png" alt></button>
-</form>
-</div>
-</div>
-
-
-<script src="js/vendor/jquery-3.2.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.slicknav.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.nice-select.min.js"></script>
-<script src="js/jquery-ui.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/main.js"></script>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-23581568-13');
+  document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+
 </body>
 </html>
