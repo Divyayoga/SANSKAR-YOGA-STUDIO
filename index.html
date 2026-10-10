@@ -79,8 +79,20 @@ border: none;
     .btn.gold{background:var(--gold);border-color:var(--gold);color:#17372e}
     .btn.outline{background:transparent;color:var(--green);border-color:rgba(18,63,53,.3)}
     .mobile-btn{display:none;border:0;background:none;font-size:28px;color:var(--green)}
-    .hero{background:linear-gradient(120deg,#eef5ee 0%,#fff 56%,#f6efe0 100%);overflow:hidden}
-    .hero-grid{min-height:680px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;padding:70px 0}
+    .hero{background-color:#103b31;background-image:linear-gradient(90deg,rgba(7,38,30,.88) 0%,rgba(7,38,30,.72) 43%,rgba(7,38,30,.18) 100%),url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=2200&q=85');background-position:center,center 48%;background-size:cover;background-repeat:no-repeat;overflow:hidden;color:#fff}
+    .hero-grid{min-height:620px;display:grid;grid-template-columns:minmax(0,760px);align-items:center;gap:0;padding:78px 0}
+    .hero-copy{max-width:760px;padding:16px 0}
+    .hero .eyebrow{color:#e1c27a;letter-spacing:2.2px;margin-bottom:18px}
+    .hero h1{max-width:740px;color:#fff;font-size:clamp(48px,6vw,78px);line-height:1.02;letter-spacing:-1.4px;margin-bottom:22px}
+    .hero h1 span{display:none}
+    .hero p{max-width:540px;color:rgba(255,255,255,.88);font-size:17px;line-height:1.75;margin:0}
+    .hero .hero-note{color:rgba(255,255,255,.76);margin-top:18px}
+    .hero .btn{background:var(--gold);border-color:var(--gold);color:#17372e}
+    .hero .btn.outline{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.72);color:#fff}
+    .hero .btn:hover{background:#e1c27a}
+    .hero .btn.outline:hover{background:rgba(255,255,255,.16)}
+    .hero .hero-visual{display:none}
+    @media(max-width:760px){.hero{background-position:center,58% center}.hero-grid{min-height:570px;padding:62px 0}.hero h1{font-size:clamp(43px,11vw,60px);letter-spacing:-.7px}.hero p{font-size:15px}.hero-actions{gap:10px}.hero .btn{padding:12px 17px;font-size:13px}}
     .eyebrow{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:800;margin-bottom:12px}
     h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;color:var(--green);line-height:1.05;margin:0 0 18px}
     h1{font-size:clamp(52px,6vw,82px)}
@@ -681,20 +693,14 @@ letter-spacing: 1.2px;
   <main>
     <section class="hero">
       <div class="container hero-grid">
-        <div>
+        <div class="hero-copy">
           <div class="eyebrow">Traditional Yoga • Modern Guidance</div>
-          <h1>Build a Strong Body. <br>Calm the Mind.<span>Ashtangaa Yoga with Mukesh</span></h1>
-          <p>Online yoga classes for beginners and experienced practitioners — combining yoga asana, pranayama and meditation with personal guidance.</p>
+          <h1>Build a Strong Body.<br>Calm the Mind.</h1>
+          <p>Personalised online yoga, pranayama and meditation for every level.</p>
           <div class="hero-actions">
-            <a class="btn" href="contact.html">Book Your Personal Class</a>
-            <a class="btn outline" href="classes.html">Explore Yoga Classes</a>
+            <a class="btn" href="classes.html">Explore Yoga Classes</a>
+            <a class="btn outline" href="contact.html">Book a Personal Class</a>
           </div>
-          <div class="hero-note">Online sessions • Personalized guidance • Students worldwide</div>
-        </div>
-
-        <div class="hero-visual">
-          <img src="img/hero-slider/2.png" alt="Yoga practice with Mukesh - Ashtangaa Yoga">
-          <div class="badge">🧘 Personal Guidance<small>Practice at your own pace</small></div>
         </div>
       </div>
     </section>
