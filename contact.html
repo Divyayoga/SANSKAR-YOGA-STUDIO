@@ -608,6 +608,26 @@ height:40px;
 
 }
 
+
+/* Branded header, mobile menu and YouTube channel panel */
+.logo .brand-text{display:flex;flex-direction:column;line-height:1.02;gap:4px}
+.logo .brand-text strong{font-size:25px;font-weight:700}
+.logo .brand-text small{font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+.mobile-menu-btn{display:none;border:1px solid #e7e3d7;background:#fff;color:var(--green);border-radius:10px;padding:8px 12px;font-size:22px;cursor:pointer}
+.youtube-feature{padding:64px 0;background:linear-gradient(135deg,#f5f7f2,#fffaf0)}
+.youtube-feature-card{max-width:940px;margin:auto;border:1px solid rgba(201,164,92,.45);border-radius:24px;padding:42px 32px;text-align:center;background:#fff;box-shadow:0 18px 48px rgba(16,35,30,.08)}
+.youtube-feature-card .youtube-kicker{font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:var(--green2);margin-bottom:10px}
+.youtube-feature-card h2{font-size:clamp(34px,4vw,48px);margin-bottom:12px}
+.youtube-feature-card p{max-width:620px;margin:0 auto 24px;color:var(--text)}
+.youtube-channel-button{display:inline-flex;align-items:center;justify-content:center;gap:11px;background:#c9a45c;color:#10231e;padding:13px 24px;border-radius:999px;font-weight:700;box-shadow:0 8px 20px rgba(201,164,92,.22);transition:.2s}
+.youtube-channel-button:hover{background:#b8934e;transform:translateY(-2px)}
+.youtube-channel-button img{width:29px;height:29px;object-fit:contain;border-radius:50%;background:#fff;padding:2px}
+.footer-youtube-mini{margin:18px 0 10px;padding-top:18px;border-top:1px solid rgba(255,255,255,.13)}
+.footer-youtube-mini a{display:inline-flex;align-items:center;gap:9px;color:#dce9e3;font-size:13px;font-weight:600}
+.footer-youtube-mini img{width:27px;height:27px;object-fit:contain;background:#fff;border:1px solid #c9a45c;border-radius:50%;padding:2px}
+@media(max-width:900px){.mobile-menu-btn{display:block}.nav-links{display:none;position:absolute;top:78px;left:0;right:0;background:#fff;padding:18px 5%;box-shadow:0 16px 25px rgba(0,0,0,.1);flex-direction:column;align-items:stretch;gap:8px}.nav-links.active{display:flex}.nav-links a{padding:10px 4px}.nav-links .nav-btn{text-align:center;margin-top:5px}.logo .brand-text strong{font-size:22px}}
+@media(max-width:600px){.youtube-feature-card{padding:32px 20px}.youtube-channel-button{font-size:13px;padding:12px 18px}.logo img{width:42px;height:42px}}
+
 </style>
 </head>
 
@@ -618,12 +638,13 @@ height:40px;
 <header>
 <div class="container nav">
 
-<a href="index.html" class="logo">
-<img src="img/logo.png" alt="Ashtangaa Yoga Logo">
-<span>Ashtangaa Yoga</span>
+<a href="index.html" class="logo" aria-label="Ashtangaa Yoga with Mukesh home">
+<img src="img/ashtangaa-logo.jpeg" alt="Ashtangaa Yoga Logo">
+<span class="brand-text"><strong>Ashtangaa Yoga</strong><small>with Mukesh</small></span>
 </a>
 
-<nav class="nav-links">
+<button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-expanded="false" aria-controls="contactNav" aria-label="Open navigation menu">☰</button>
+<nav class="nav-links" id="contactNav">
 <a href="index.html">Home</a>
 <a href="online-yoga-classes.html">Online Yoga</a>
 <a href="programs.html">Programs</a>
@@ -1350,6 +1371,20 @@ Book Your Free Demo
 
 <!-- FOOTER -->
 
+<section class="youtube-feature" aria-labelledby="youtube-channel-title">
+  <div class="container">
+    <div class="youtube-feature-card">
+      <div class="youtube-kicker">Practice with us</div>
+      <h2 id="youtube-channel-title">Continue Your Yoga Journey</h2>
+      <p>Explore guided yoga practices, pranayama and meditation on the Ashtangaa Yoga YouTube channel.</p>
+      <a class="youtube-channel-button" href="https://www.youtube.com/@ashtangayogawithmukesh" target="_blank" rel="noopener noreferrer">
+        <img src="img/ashtangaa-logo.jpeg" alt="">
+        Visit Our YouTube Channel <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <footer>
 
 <div class="container">
@@ -1444,6 +1479,29 @@ aria-label="Chat with Mukesh on WhatsApp">
 </svg>
 
 </a>
+
+
+<script>
+(function(){
+  const button=document.getElementById('mobileMenuBtn');
+  const nav=document.getElementById('contactNav');
+  if(!button||!nav)return;
+  button.addEventListener('click',function(){
+    const open=nav.classList.toggle('active');
+    button.setAttribute('aria-expanded',String(open));
+    button.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');
+    button.textContent=open?'✕':'☰';
+  });
+  nav.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click',function(){
+      nav.classList.remove('active');
+      button.setAttribute('aria-expanded','false');
+      button.setAttribute('aria-label','Open navigation menu');
+      button.textContent='☰';
+    });
+  });
+})();
+</script>
 
 </body> 
 </html>
