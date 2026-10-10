@@ -840,6 +840,13 @@
 .youtube-channel-btn>span{display:inline-flex;align-items:center;gap:8px}
 @media(max-width:600px){.youtube-box{padding:32px 18px}.youtube-box h2{font-size:36px}.youtube-channel-btn{max-width:100%;padding:11px 15px;font-size:12px}.youtube-channel-btn>img{width:28px;height:28px}.youtube-brand-lockup strong{font-size:23px}}
 
+
+/* Footer repair: clean link layout and compact channel link */
+.footer-youtube-mini{margin:20px 0 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.12)}
+.footer-youtube-mini>a{display:inline-flex;align-items:center;gap:9px;color:rgba(255,255,255,.82);text-decoration:none;font-size:12px;font-weight:600;line-height:1.35;transition:color .2s}
+.footer-youtube-mini>a:hover{color:var(--gold)}
+.footer-youtube-mini img{width:25px;height:25px;object-fit:contain;background:#fff;border:1px solid #c6a45b;border-radius:50%;padding:1px;flex-shrink:0}
+.footer-links a{display:block}
 </style>
 
 </head>
@@ -1438,75 +1445,61 @@ Book a Yoga Class
 </a>
 </div>
 </section>
-<!-- FOOTER
+<!-- FOOTER -->
 <footer>
--->
-<div class="container">
-<div class="footer-grid">
-<div>
-<h3>Ashtangaa Yoga</h3>
-<p>
-Online yoga classes with Mukesh.
-Explore traditional
-yoga, personal 1-to-1 sessions,
-pranayama, meditation
-and practical yoga programs from
-anywhere in the world.
-</p>
-</div>
-<div class="footer-links">
-<h3>Yoga Classes</h3>
-<a href="online-yoga-classes.html">
-Online Yoga Classes
-</a>
-<a href="personal-yoga.html"> Personal 1-to-1 Yoga
-</a>
-href="yoga-for-beginners.html"> Yoga for Beginners
-</a>
-<a href="weight-loss-yoga.html"> Weight Loss Yoga
-</a>
-href="pranayama-meditation.html">
-Pranayama
-</a>
-</div>
-<div class="footer-links">
-<h3>Explore</h3>
-<a href="about-mukesh.html">
-About Mukesh
-</a>
-<a href="pranayama-meditation.html">
-Meditation
-</a>
-<a href="pregnancy-postpartum-yoga.html">
-Prenatal Yoga
-</a>
-<a href="pregnancy-postpartum-yoga.html">
-Postnatal Yoga
-</a>
-<a href="contact.html">
-Contact
-</a>
-</div>
-</div>
-<div class="footer-youtube-mini" style="margin:14px 0 10px"><a href="https://www.youtube.com/@ashtangayogawithmukesh" target="_blank" rel="noopener noreferrer" aria-label="Visit Ashtangaa Yoga YouTube channel" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-size:12px;font-weight:600;line-height:1.3;color:inherit;opacity:.92"><img src="img/ashtangaa-logo.jpeg" alt="" style="width:24px;height:24px;object-fit:contain;background:#fff;border:1px solid #c6a45b;border-radius:50%;padding:1px;flex-shrink:0"><span>Ashtangaa Yoga on YouTube <span aria-hidden="true" style="color:#c6a45b">↗</span></span></a></div>
-<div class="copyright">
-© 2026 Ashtangaa Yoga with Mukesh. All
-Rights Reserved.
-</div>
-</div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <h3>Ashtangaa Yoga</h3>
+        <p>Online yoga classes with Mukesh. Explore traditional yoga, personal 1-to-1 sessions, pranayama, meditation and practical yoga programs from anywhere in the world.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Yoga Classes</h3>
+        <a href="online-yoga-classes.html">Online Yoga Classes</a>
+        <a href="personal-yoga.html">Personal 1-to-1 Yoga</a>
+        <a href="yoga-for-beginners.html">Yoga for Beginners</a>
+        <a href="weight-loss-yoga.html">Weight Loss Yoga</a>
+        <a href="pranayama-meditation.html">Pranayama &amp; Meditation</a>
+      </div>
+      <div class="footer-links">
+        <h3>Explore</h3>
+        <a href="about-mukesh.html">About Mukesh</a>
+        <a href="pranayama-meditation.html">Meditation</a>
+        <a href="pregnancy-postpartum-yoga.html">Prenatal Yoga</a>
+        <a href="pregnancy-postpartum-yoga.html">Postnatal Yoga</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="footer-youtube-mini">
+      <a href="https://www.youtube.com/@ashtangayogawithmukesh" target="_blank" rel="noopener noreferrer" aria-label="Visit Ashtangaa Yoga YouTube channel">
+        <img src="img/ashtangaa-logo.jpeg" alt="">
+        <span>Ashtangaa Yoga on YouTube <span aria-hidden="true">↗</span></span>
+      </a>
+    </div>
+    <div class="copyright">© 2026 Ashtangaa Yoga with Mukesh. All Rights Reserved.</div>
+  </div>
 </footer>
-<!-- MOBILE MENU SCRIPT
 <script>
-const mobileBtn =
-<-->
-document.getElementById("mobileBtn");
-const menu
-=
-document.getElementById("menu");
-mobileBtn.addEventListener("click",
-function(){
-menu.classList.toggle("active");
-});
+(function () {
+  const mobileBtn = document.getElementById("mobileBtn");
+  const menu = document.getElementById("menu");
+  if (mobileBtn && menu) {
+    mobileBtn.setAttribute("aria-expanded", "false");
+    mobileBtn.setAttribute("aria-label", "Open navigation menu");
+    mobileBtn.addEventListener("click", function () {
+      const isOpen = menu.classList.toggle("active");
+      mobileBtn.setAttribute("aria-expanded", String(isOpen));
+      mobileBtn.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+    });
+    menu.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        menu.classList.remove("active");
+        mobileBtn.setAttribute("aria-expanded", "false");
+        mobileBtn.setAttribute("aria-label", "Open navigation menu");
+      });
+    });
+  }
+})();
 </script>
 </body>
 </html>
