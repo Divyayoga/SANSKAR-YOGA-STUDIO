@@ -162,9 +162,21 @@ header{
 }
 
 .logo img{
-    width:48px;
-    height:48px;
-    object-fit:contain;
+    width:52px;height:52px;object-fit:contain;border:2px solid var(--gold);
+    border-radius:50%;padding:2px;box-sizing:border-box;
+}
+.logo-text strong{
+    display:block;font-family:'Cormorant Garamond',serif;font-size:28px;
+    font-weight:700;letter-spacing:.5px;color:var(--green);line-height:.95;
+}
+.logo-text span{
+    display:block;font-family:'Inter',sans-serif;font-size:11px;font-weight:500;
+    letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-top:5px;
+}
+@media(max-width:600px){
+    .logo img{width:44px;height:44px;}
+    .logo-text strong{font-size:23px;}
+    .logo-text span{font-size:9px;letter-spacing:2.2px;}
 }
 
 .logo-text strong{
@@ -602,9 +614,9 @@ header{
 
 <div class="container nav">
 
-<a href="index.html" class="logo">
+<a href="index.html" class="logo" aria-label="Ashtangaa Yoga Home">
 
-<img src="img/logo.png" alt="Ashtangaa Yoga Logo">
+<img src="img/ashtangaa-logo.jpeg" alt="Ashtangaa Yoga Logo">
 
 <div class="logo-text">
 
@@ -636,6 +648,8 @@ header{
 
 <a href="about-mukesh.html">About Mukesh</a>
 
+<a href="events.html">Events</a>
+<a href="blog.html">Blog</a>
 <a href="contact.html">Book a Class</a>
 
 </nav>
