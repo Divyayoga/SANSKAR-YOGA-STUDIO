@@ -788,6 +788,20 @@
     }
 
   </style>
+
+  <!-- Consistent Ashtangaa Yoga brand styling -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style id="ashtangaa-brand-consistency">
+    .brand-logo, .brand-icon { width:52px; height:52px; flex:0 0 52px; display:flex; align-items:center; justify-content:center; overflow:hidden; background:transparent; border-radius:50%; font-size:0; }
+    .brand-logo img, .brand-icon img { display:block; width:100%; height:100%; object-fit:contain; }
+    .brand-text { display:flex; flex-direction:column; gap:3px; }
+    .brand-text strong, .ay-brand-name strong { display:block; font-family:'Cormorant Garamond',serif!important; font-size:28px!important; font-weight:700!important; line-height:.9!important; color:#123f35!important; letter-spacing:.5px!important; }
+    .brand-text span, .ay-brand-name small { display:block; font-family:'Inter',sans-serif!important; font-size:11px!important; font-weight:500!important; line-height:1.35!important; letter-spacing:3px!important; text-transform:uppercase!important; color:#c9a45c!important; margin-top:3px; }
+    @media (max-width:600px) { .brand-logo, .brand-icon { width:44px; height:44px; flex-basis:44px; } .brand-text strong, .ay-brand-name strong { font-size:23px!important; } .brand-text span, .ay-brand-name small { font-size:9px!important; letter-spacing:2.2px!important; } }
+  </style>
+
 </head>
 
 <body>
@@ -799,7 +813,7 @@
 
     <a href="index.html" class="brand">
 
-      <div class="brand-logo">ॐ</div>
+      <div class="brand-logo"><img src="img/ashtangaa-logo.jpeg" alt="Ashtangaa Yoga Logo"></div>
 
       <div class="brand-text">
         <strong>Ashtangaa Yoga</strong>
