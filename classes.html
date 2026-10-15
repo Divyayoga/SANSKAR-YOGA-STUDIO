@@ -16,14 +16,496 @@ footer{background:var(--d);color:#e8f0eb;padding:30px 0;text-align:center;font-s
 .modal-backdrop{display:none;position:fixed;inset:0;z-index:2000;background:rgba(10,30,22,.68);padding:18px;overflow-y:auto;align-items:center;justify-content:center}.modal-backdrop.open{display:flex}.booking-modal{position:relative;width:min(520px,100%);background:#fff;border-radius:20px;padding:28px;box-shadow:0 25px 80px #0004}.booking-modal h2{font:700 34px 'Cormorant Garamond',serif;color:var(--d);margin:0 35px 4px 0}.booking-modal>p{margin:0 0 18px;color:var(--muted);font-size:13px}.modal-close{position:absolute;right:15px;top:13px;width:38px;height:38px;border:1px solid var(--border);border-radius:50%;background:var(--cream);font-size:23px;color:var(--d);cursor:pointer}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:flex;flex-direction:column;gap:5px}.field.full{grid-column:1/-1}.field label{font-size:12px;font-weight:700;color:var(--d)}.field input,.field select,.field textarea{width:100%;padding:11px 12px;border:1px solid #d9e2d8;border-radius:9px;background:#fff;font:14px Inter,Arial;color:var(--text)}.field textarea{min-height:75px;resize:vertical}.submit-btn{width:100%;margin-top:16px;padding:14px;border:0;border-radius:10px;background:#16834a;color:white;font-size:14px;font-weight:800;cursor:pointer}.privacy-note{font-size:11px;color:var(--muted);margin-top:9px}
 @media(max-width:1100px){.ay-nav-wrap{width:92%;min-height:74px;flex-wrap:wrap;gap:12px;padding:10px 0}.ay-menu-toggle{display:block}.ay-menu{display:none;flex:0 0 100%;width:100%;align-items:stretch;flex-direction:column;gap:4px;padding:10px 0 5px;border-top:1px solid var(--border)}.ay-menu.ay-menu-open{display:flex}.ay-link{width:100%;padding:10px 12px;white-space:normal;font-size:14px}.ay-nav-heading>.ay-link{flex:1}.ay-nav-heading{width:100%}.ay-dropdown-toggle{width:42px;height:42px;margin:0;border:1px solid var(--border)}.ay-dropdown{display:none;position:static;width:100%;margin:3px 0 8px;padding:7px;box-shadow:none;opacity:1;visibility:visible;transform:none;border:1px solid var(--border);border-left:3px solid var(--gold)}.ay-nav-group.ay-open>.ay-dropdown{display:block}.ay-book-btn{margin:8px 0 4px;justify-content:center;padding:13px;font-size:14px}.grid{grid-template-columns:1fr 1fr}.ay-brand-mark{width:46px;height:46px}.ay-brand-name strong{font-size:22px}}
 @media(max-width:620px){.grid{grid-template-columns:1fr}.hero{padding:60px 0}.section{padding:52px 0}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.booking-modal{padding:24px 19px}}
-</style></head><body>
-<header class="ay-header"><div class="ay-nav-wrap"><a class="ay-brand" href="index.html" aria-label="Ashtangaa Yoga Home"><span class="ay-brand-mark"><img src="img/ashtangaa-logo.jpeg" alt="Ashtangaa Yoga logo"></span><span class="ay-brand-name"><strong>Ashtangaa Yoga</strong><small>with Mukesh</small></span></a>
-<button class="ay-menu-toggle" id="ayMenuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="ayMainMenu"><span></span><span></span><span></span></button>
-<nav class="ay-menu" id="ayMainMenu" aria-label="Main navigation"><a class="ay-link" href="index.html">Home</a><a class="ay-link" href="about-mukesh.html">About Mukesh</a>
-<div class="ay-nav-group"><div class="ay-nav-heading"><a class="ay-link" href="online-yoga-classes.html">Online Yoga Classes</a><button class="ay-dropdown-toggle" type="button" aria-label="Show yoga class links" aria-expanded="false">⌄</button></div><div class="ay-dropdown">
-<a href="classes.html"><span class="ay-drop-icon">🧘</span><span><strong>Yoga Classes</strong><small>Explore class options</small></span></a><a href="programs.html"><span class="ay-drop-icon">🌿</span><span><strong>Yoga Programs</strong><small>Structured practice plans</small></span></a><a href="yoga-for-beginners.html"><span class="ay-drop-icon">🌱</span><span><strong>Yoga for Beginners</strong><small>Start your yoga journey</small></span></a><a href="weight-loss-yoga.html"><span class="ay-drop-icon">⚖️</span><span><strong>Weight Loss Yoga</strong><small>Movement and mindful habits</small></span></a><a href="pranayama-meditation.html"><span class="ay-drop-icon">🌬️</span><span><strong>Pranayama & Meditation</strong><small>Breath, focus and relaxation</small></span></a><a href="pregnancy-postpartum-yoga.html"><span class="ay-drop-icon">🌸</span><span><strong>Prenatal & Postnatal Yoga</strong><small>Guidance for each stage</small></span></a></div></div>
-<div class="ay-nav-group"><div class="ay-nav-heading"><a class="ay-link" href="personal-yoga.html">Personal Yoga</a><button class="ay-dropdown-toggle" type="button" aria-label="Show personal yoga services" aria-expanded="false">⌄</button></div><div class="ay-dropdown"><a href="one-to-one-yoga.html"><span class="ay-drop-icon">👤</span><span><strong>One-to-One Sessions</strong><small>Individual guidance</small></span></a><a href="personal-yoga.html"><span class="ay-drop-icon">🎯</span><span><strong>Personal Yoga</strong><small>Practice for your goals</small></span></a></div></div>
-<a class="ay-link" href="events.html">Events</a><a class="ay-link" href="blog.html">Blog</a><a class="ay-link" href="contact.html">Contact Us</a><a class="ay-book-btn" href="#booking" data-open-booking>Book Now <span>↗</span></a></nav></div></header>
+</style><style id="shared-homepage-menu-css">
+.ay-header {
+  --ay-green: #176b42;
+  --ay-dark: #174d31;
+  --ay-gold: #c6a45b;
+  --ay-pale: #edf5eb;
+  --ay-border: #e1e9df;
+
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom: 1px solid var(--ay-border);
+  box-shadow: 0 5px 22px rgba(23, 77, 49, 0.06);
+  backdrop-filter: blur(12px);
+}
+
+.ay-nav-wrap {
+  width: min(1240px, 94%);
+  min-height: 82px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.ay-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+
+.ay-brand img {
+  width: 150%;
+  height: 150%;
+  max-width: none;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  flex-shrink: 0;
+  border: none;
+}
+
+.ay-brand-name {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.35;
+}
+
+.ay-brand-name strong {
+  color: var(--ay-dark);
+  font-size: 19px;
+  font-weight: 750;
+  letter-spacing: -0.4px;
+}
+
+.ay-brand-name small {
+color: #c6a45b;
+font-size: 12px;
+letter-spacing: 1.2px;
+}
+
+.ay-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 3px;
+}
+
+.ay-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 11px 9px;
+  color: var(--ay-dark);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background .2s ease, color .2s ease;
+}
+
+.ay-link:hover,
+.ay-link:focus-visible {
+  color: var(--ay-green);
+  background: var(--ay-pale);
+  outline: none;
+}
+
+.ay-nav-group {
+  position: relative;
+}
+
+.ay-nav-heading {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.ay-dropdown-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 34px;
+  margin-left: -5px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ay-green);
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform .2s, background .2s;
+}
+
+.ay-dropdown-toggle:hover,
+.ay-dropdown-toggle:focus-visible {
+  background: var(--ay-pale);
+  outline: 2px solid transparent;
+}
+
+.ay-dropdown-toggle[aria-expanded="true"] {
+  transform: rotate(180deg);
+}
+
+.ay-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 310px;
+  padding: 9px;
+  background: #fff;
+  border: 1px solid var(--ay-border);
+  border-top: 3px solid var(--ay-gold);
+  border-radius: 13px;
+  box-shadow: 0 18px 45px rgba(23, 77, 49, 0.14);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity .2s ease, transform .2s ease, visibility .2s;
+}
+
+.ay-dropdown-personal {
+  width: 330px;
+}
+
+.ay-nav-group:hover > .ay-dropdown,
+.ay-nav-group:focus-within > .ay-dropdown,
+.ay-nav-group.ay-open > .ay-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.ay-dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 10px;
+  color: var(--ay-dark);
+  text-decoration: none;
+  border-radius: 9px;
+  transition: background .2s ease;
+}
+
+.ay-dropdown a:hover,
+.ay-dropdown a:focus-visible {
+  background: var(--ay-pale);
+  outline: none;
+}
+
+.ay-drop-icon {
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  background: #f0f6ed;
+  border: 1px solid #e3eddf;
+  border-radius: 10px;
+  font-size: 19px;
+}
+
+.ay-dropdown a strong {
+  display: block;
+  color: var(--ay-dark);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.ay-dropdown a small {
+  display: block;
+  margin-top: 3px;
+  color: #728075;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.ay-book-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-left: 9px;
+  padding: 12px 16px;
+  color: #fff;
+  background: var(--ay-green);
+  border: 1px solid var(--ay-green);
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  text-decoration: none;
+  box-shadow: 0 5px 14px rgba(23, 107, 66, 0.15);
+  transition: background .2s ease, transform .2s ease;
+}
+
+.ay-book-btn span {
+  color: #f4dfab;
+  font-size: 16px;
+}
+
+.ay-book-btn:hover,
+.ay-book-btn:focus-visible {
+  color: #fff;
+  background: var(--ay-dark);
+  border-color: var(--ay-dark);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.ay-menu-toggle {
+  display: none;
+  width: 44px;
+  height: 42px;
+  padding: 10px;
+  border: 1px solid var(--ay-border);
+  border-radius: 10px;
+  background: var(--ay-pale);
+  cursor: pointer;
+}
+
+.ay-menu-toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  margin: 4px 0;
+  border-radius: 3px;
+  background: var(--ay-dark);
+  transition: transform .2s, opacity .2s;
+}
+
+/* Tablet and mobile */
+@media (max-width: 1100px) {
+  .ay-nav-wrap {
+    width: 92%;
+    min-height: 74px;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 10px 0;
+  }
+
+  .ay-menu-toggle {
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .ay-menu {
+    display: none;
+    flex: 0 0 100%;
+    width: 100%;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px 0 5px;
+    border-top: 1px solid var(--ay-border);
+  }
+
+  .ay-menu.ay-menu-open {
+    display: flex;
+  }
+
+  .ay-link {
+    width: 100%;
+    min-height: 43px;
+    padding: 11px 12px;
+    white-space: normal;
+    font-size: 14px;
+  }
+
+  .ay-nav-heading {
+    width: 100%;
+  }
+
+  .ay-nav-heading > .ay-link {
+    flex: 1;
+  }
+
+  .ay-dropdown-toggle {
+    width: 43px;
+    height: 43px;
+    margin-left: 0;
+    border: 1px solid var(--ay-border);
+  }
+
+  .ay-dropdown {
+    display: none;
+    position: static;
+    width: 100%;
+    margin: 3px 0 9px;
+    padding: 7px;
+    border: 1px solid var(--ay-border);
+    border-left: 3px solid var(--ay-gold);
+    border-top: 1px solid var(--ay-border);
+    border-radius: 10px;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: none;
+  }
+
+  .ay-dropdown-personal {
+    width: 100%;
+  }
+
+  .ay-nav-group.ay-open > .ay-dropdown {
+    display: block;
+  }
+
+  .ay-dropdown a {
+    padding: 10px 8px;
+  }
+
+  .ay-book-btn {
+    justify-content: center;
+    margin: 8px 0 4px;
+    padding: 14px;
+    font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ay-header *,
+  .ay-header *::before,
+  .ay-header *::after {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+.ay-brand .brand-mark,.ay-brand .ay-brand-mark{width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:#174d31;display:flex;align-items:center;justify-content:center;border:2px solid #D4AF37;box-sizing:border-box}.ay-brand .brand-mark img,.ay-brand .ay-brand-mark img{width:150%;height:150%;max-width:none;object-fit:cover;border-radius:50%;display:block;flex-shrink:0;border:0}
+
+</style>
+</head><body>
+<header class="ay-header">
+  <div class="ay-nav-wrap">
+
+    <a class="ay-brand" href="index.html" aria-label="Ashtangaa Yoga Home">
+      <span class="brand-mark">
+  <img src="img/ashtangaa-logo.jpeg" alt="Ashtangaa Yoga Logo">
+      </span>
+      <span class="ay-brand-name">
+        <strong>Ashtangaa Yoga</strong>
+        <small>with Mukesh</small>
+      </span>
+    </a>
+
+    <button class="ay-menu-toggle"
+      id="ayMenuToggle"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="ayMainMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="ay-menu" id="ayMainMenu" aria-label="Main navigation">
+
+      <a class="ay-link" href="index.html">Home</a>
+      <a class="ay-link" href="about-mukesh.html">About Mukesh</a>
+
+      <div class="ay-nav-group">
+        <div class="ay-nav-heading">
+          <a class="ay-link" href="online-yoga-classes.html">
+            Online Yoga Classes
+          </a>
+          <button class="ay-dropdown-toggle"
+            type="button"
+            aria-label="Show online yoga class links"
+            aria-expanded="false">⌄</button>
+        </div>
+
+        <div class="ay-dropdown">
+          <a href="online-yoga-classes.html">
+            <span class="ay-drop-icon">▶</span>
+            <span><strong>Online Yoga Classes</strong><small>Live and guided online sessions</small></span>
+          </a>
+          <a href="online-group-yoga-classes.html">
+            <span class="ay-drop-icon">👥</span>
+            <span><strong>Online Group Yoga</strong><small>Live group practice from home</small></span>
+          </a>
+          <a href="classes.html">
+            <span class="ay-drop-icon">🧘</span>
+            <span>
+              <strong>Yoga Classes</strong>
+              <small>Explore class options</small>
+            </span>
+          </a>
+          <a href="programs.html">
+            <span class="ay-drop-icon">🌿</span>
+            <span>
+              <strong>Yoga Programs</strong>
+              <small>Structured practice plans</small>
+            </span>
+          </a>
+          <a href="yoga-for-beginners.html">
+            <span class="ay-drop-icon">🌱</span>
+            <span>
+              <strong>Yoga for Beginners</strong>
+              <small>Start your yoga journey</small>
+            </span>
+          </a>
+          <a href="weight-loss-yoga.html">
+            <span class="ay-drop-icon">⚖️</span>
+            <span>
+              <strong>Weight Loss Yoga</strong>
+              <small>Movement and mindful habits</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="ay-nav-group">
+        <div class="ay-nav-heading">
+          <a class="ay-link" href="personal-yoga.html">Personal Yoga</a>
+          <button class="ay-dropdown-toggle"
+            type="button"
+            aria-label="Show personal yoga services"
+            aria-expanded="false">⌄</button>
+        </div>
+
+        <div class="ay-dropdown ay-dropdown-personal">
+          <a href="one-to-one-yoga.html">
+            <span class="ay-drop-icon">👤</span>
+            <span>
+              <strong>One-to-One Sessions</strong>
+              <small>Individual online guidance</small>
+            </span>
+          </a>
+          <a href="personalized-yoga.html">
+            <span class="ay-drop-icon">🎯</span>
+            <span>
+              <strong>Personalized Guidance</strong>
+              <small>Practice shaped around your goals</small>
+            </span>
+          </a>
+          <a href="pranayama-meditation.html">
+            <span class="ay-drop-icon">🌬️</span>
+            <span>
+              <strong>Pranayama &amp; Meditation</strong>
+              <small>Breathing and mindful practice</small>
+            </span>
+          </a>
+          <a href="pregnancy-postpartum-yoga.html">
+            <span class="ay-drop-icon">🤍</span>
+            <span>
+              <strong>Pregnancy &amp; Postpartum</strong>
+              <small>Guidance for different stages</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <a class="ay-link" href="trainer.html">Trainer</a>
+      <a class="ay-link" href="events.html">Events</a>
+      <a class="ay-link" href="blog.html">Blog</a>
+      <a class="ay-link" href="contact.html">Contact Us</a>
+
+      <a class="ay-book-btn" href="contact.html">
+        Book a Class <span aria-hidden="true">↗</span>
+      </a>
+
+    </nav>
+  </div>
+</header>
 <main><section class="hero"><div class="container"><span class="eyebrow">Move · Breathe · Grow</span><h1>Online Yoga Classes for Your Journey</h1><p>Find a guided practice that fits your experience, goals and daily routine. Explore yoga classes with Mukesh and enquire directly to discuss the right option for you.</p><button class="btn" type="button" data-open-booking>Book Now ↗</button></div></section>
 <section class="section"><div class="container"><div class="heading"><span class="eyebrow">Choose Your Practice</span><h2>Explore Yoga Classes</h2><p>From foundational movement to focused personal guidance, choose a starting point that suits you.</p></div><div class="grid">
 <article class="card"><div class="card-icon">🌱</div><h3>Yoga for Beginners</h3><p>Build a foundation with warm-ups, accessible postures, mobility and a steady home-practice routine.</p><a class="btn" href="yoga-for-beginners.html">Explore Beginners ↗</a></article>
@@ -49,4 +531,81 @@ footer{background:var(--d);color:#e8f0eb;padding:30px 0;text-align:center;font-s
 (function(){const menu=document.getElementById("ayMainMenu"),toggle=document.getElementById("ayMenuToggle"),groups=menu.querySelectorAll(".ay-nav-group");function close(except){groups.forEach(g=>{if(g!==except){g.classList.remove("ay-open");const b=g.querySelector(".ay-dropdown-toggle");if(b)b.setAttribute("aria-expanded","false");}})}toggle.addEventListener("click",()=>{const open=menu.classList.toggle("ay-menu-open");toggle.setAttribute("aria-expanded",String(open));toggle.setAttribute("aria-label",open?"Close navigation menu":"Open navigation menu");if(!open)close()});groups.forEach(g=>{const b=g.querySelector(".ay-dropdown-toggle");b.addEventListener("click",e=>{e.preventDefault();const open=!g.classList.contains("ay-open");close(g);g.classList.toggle("ay-open",open);b.setAttribute("aria-expanded",String(open))})});menu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{if(window.innerWidth<=1100){menu.classList.remove("ay-menu-open");toggle.setAttribute("aria-expanded","false");close()}}));document.addEventListener("click",e=>{if(!e.target.closest(".ay-header"))close()});})();
 (function(){const modal=document.getElementById("bookingModal"),form=document.getElementById("bookingForm");function open(){modal.classList.add("open");document.body.style.overflow="hidden";document.getElementById("studentName").focus()}function close(){modal.classList.remove("open");document.body.style.overflow=""}document.querySelectorAll("[data-open-booking]").forEach(b=>b.addEventListener("click",e=>{e.preventDefault();open()}));document.getElementById("closeBooking").addEventListener("click",close);modal.addEventListener("click",e=>{if(e.target===modal)close()});document.addEventListener("keydown",e=>{if(e.key==="Escape")close()});form.addEventListener("submit",e=>{e.preventDefault();const d=new FormData(form);const msg=["Namaste Mukesh ji, I would like to enquire/book a yoga class.","Name: "+d.get("name"),"Phone/WhatsApp: "+(d.get("phone")||"Not provided"),"Class: "+d.get("class"),"Preferred format: "+d.get("format"),"Preferred time: "+d.get("time"),"Goals/message: "+(d.get("goals")||"Not specified")].join("\n");window.location.href="https://wa.me/919785848405?text="+encodeURIComponent(msg)});})();
 document.getElementById("year").textContent=new Date().getFullYear();
-</script></body></html>
+</script><script>
+(function () {
+  const menu = document.getElementById("ayMainMenu");
+  const menuButton = document.getElementById("ayMenuToggle");
+  const groups = document.querySelectorAll(".ay-nav-group");
+
+  if (!menu || !menuButton) return;
+
+  function closeDropdowns(exceptGroup) {
+    groups.forEach(function (group) {
+      if (group !== exceptGroup) {
+        group.classList.remove("ay-open");
+        const button = group.querySelector(".ay-dropdown-toggle");
+        if (button) button.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
+  menuButton.addEventListener("click", function () {
+    const isOpen = menu.classList.toggle("ay-menu-open");
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+    menuButton.setAttribute(
+      "aria-label",
+      isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
+
+    if (!isOpen) closeDropdowns();
+  });
+
+  groups.forEach(function (group) {
+    const button = group.querySelector(".ay-dropdown-toggle");
+    if (!button) return;
+
+    button.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      const willOpen = !group.classList.contains("ay-open");
+      closeDropdowns(group);
+      group.classList.toggle("ay-open", willOpen);
+      button.setAttribute("aria-expanded", String(willOpen));
+    });
+  });
+
+  menu.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+      if (window.innerWidth <= 1100) {
+        menu.classList.remove("ay-menu-open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Open navigation menu");
+        closeDropdowns();
+      }
+    });
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closeDropdowns();
+      menu.classList.remove("ay-menu-open");
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.setAttribute("aria-label", "Open navigation menu");
+    }
+  });
+
+  document.addEventListener("click", function (event) {
+    if (!event.target.closest(".ay-header")) {
+      closeDropdowns();
+    }
+  });
+
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 1100) {
+      menu.classList.remove("ay-menu-open");
+      menuButton.setAttribute("aria-expanded", "false");
+    }
+  });
+})();
+</script>
+</body></html>
