@@ -404,14 +404,19 @@
 
     .feature-icon{
       min-width:42px;
+      width:42px;
       height:42px;
+      flex:0 0 42px;
       border-radius:50%;
       background:var(--green);
-      color:white;
+      color:#fff;
       display:flex;
       align-items:center;
       justify-content:center;
-      font-weight:bold;
+      font-family:Arial,sans-serif;
+      font-size:22px;
+      line-height:1;
+      font-weight:700;
     }
 
     .feature h3{
@@ -1120,7 +1125,7 @@ Start from your current level.
 </div>
 </div>
 <div class="feature">
-<div class="feature-icon"></div>
+<div class="feature-icon" aria-hidden="true">✓</div>
 <div>
 <h3>Practice From Anywhere</h3>
 <p>
