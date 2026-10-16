@@ -2331,19 +2331,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 
-<script>
-(function(){
- const menu=document.getElementById("ayMainMenu"),toggle=document.getElementById("ayMenuToggle");
- if(!menu||!toggle)return;
- const groups=menu.querySelectorAll(".ay-nav-group");
- function close(except){groups.forEach(g=>{if(g!==except){g.classList.remove("ay-open");const b=g.querySelector(".ay-dropdown-toggle");if(b)b.setAttribute("aria-expanded","false");}});}
- toggle.addEventListener("click",()=>{const open=menu.classList.toggle("ay-menu-open");toggle.setAttribute("aria-expanded",String(open));toggle.setAttribute("aria-label",open?"Close navigation menu":"Open navigation menu");if(!open)close();});
- groups.forEach(g=>{const b=g.querySelector(".ay-dropdown-toggle");if(!b)return;b.addEventListener("click",e=>{e.preventDefault();const open=!g.classList.contains("ay-open");close(g);g.classList.toggle("ay-open",open);b.setAttribute("aria-expanded",String(open));});});
- menu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{if(window.innerWidth<=1100){menu.classList.remove("ay-menu-open");toggle.setAttribute("aria-expanded","false");close();}}));
- document.addEventListener("keydown",e=>{if(e.key==="Escape"){close();menu.classList.remove("ay-menu-open");toggle.setAttribute("aria-expanded","false");}});
- document.addEventListener("click",e=>{if(!e.target.closest(".ay-header"))close();});
-})();
-</script>
+
 <script>
 (function () {
   const menu = document.getElementById("ayMainMenu");
