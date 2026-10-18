@@ -1407,6 +1407,12 @@ method="POST">
 
 <input type="hidden" name="_template" value="table">
 
+<!-- Anti-spam honeypot: real visitors leave this field empty; many bots fill it. -->
+<div aria-hidden="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">
+  <label for="_honey">Leave this field empty</label>
+  <input type="text" id="_honey" name="_honey" tabindex="-1" autocomplete="off">
+</div>
+
 <input type="hidden" name="_captcha" value="true">
 
 <input
